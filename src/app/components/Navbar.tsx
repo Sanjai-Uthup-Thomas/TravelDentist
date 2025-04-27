@@ -11,8 +11,6 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-
-  const toggleMenu = () => setMenuOpen(!menuOpen);
   const toggleModal = () => setModalOpen(!modalOpen);
   const toggleServices = () => setServicesOpen(!servicesOpen);
 

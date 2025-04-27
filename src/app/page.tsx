@@ -13,7 +13,6 @@ import dentalImplants from '../../public/dentalImplants.webp';
 import keralaTourism from '../../public/keralaTourism.png';
 import Laser from '../../public/laser.png';
 import FMR from '../../public/FMR.webp';
-import Link from "next/link";
 import Footer from "./components/Footer";
 import Card from "./components/Card";
 

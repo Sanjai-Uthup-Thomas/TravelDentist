@@ -2,8 +2,15 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-
-const Card = ({ index, imageSrc, title, description, link, alt }: any) => {
+type CardProps = {
+    index: number;
+    imageSrc: string;
+    title: string;
+    description: [];
+    link: string;
+    alt: string;
+  };
+const Card = ({ index, imageSrc, title, description, link, alt }: CardProps) => {
     const isEvenIndex = index % 2 === 0;
 
     return (
@@ -51,7 +58,7 @@ const Card = ({ index, imageSrc, title, description, link, alt }: any) => {
                     viewport={{ once: true }}
                     transition={{ duration: 1 }}
                 >
-                    {description.map((text: any, idx: number) => (
+                    {description.map((text: string, idx: number) => (
                         <p key={idx} className="text-lg font-semibold text-pink-400">
                             {text}
                         </p>
