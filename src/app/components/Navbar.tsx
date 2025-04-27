@@ -8,7 +8,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import logo from '../../../public/TravelDentist_logo.png';
 
 export default function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const toggleModal = () => setModalOpen(!modalOpen);
@@ -64,7 +63,7 @@ export default function Navbar() {
         {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center">
           <button onClick={toggleModal} className="text-pink-400 focus:outline-none">
-            {menuOpen ? <X size={40} /> : <Menu size={40} />}
+            <Menu size={40} />
           </button>
         </div>
       </div>
