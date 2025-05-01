@@ -44,7 +44,7 @@ export default function Navbar() {
         <div className="hidden md:flex absolute left-1/2 bottom-0 transform -translate-x-1/2 mb-3">
           <button
             onClick={toggleModal}
-            className="text-pink-400 font-bold text-2xl bg-white border-2 border-pink-300 rounded-full px-6 py-2 shadow-lg hover:bg-pink-100 hover:text-pink-500 hover:scale-105 transition-all duration-300"
+            className="text-[#F875AA] font-bold text-2xl bg-white border-2 border-pink-300 rounded-full px-6 py-2 shadow-lg hover:bg-pink-100 hover:text-[#F875AA] hover:scale-105 transition-all duration-300"
           >
             Menu
           </button>
@@ -54,7 +54,7 @@ export default function Navbar() {
         <div className="hidden md:flex absolute right-0 bottom-0 transform -translate-x-1/2 mb-3">
           <Link
             href="/book-online"
-            className="text-pink-400 font-bold text-2xl bg-white border-2 border-pink-300 rounded-full px-6 py-2 shadow-lg hover:bg-pink-100 hover:text-pink-500 hover:scale-105 transition-all duration-300"
+            className="text-[#F875AA] font-bold text-2xl bg-white border-2 border-pink-300 rounded-full px-6 py-2 shadow-lg hover:bg-pink-100 hover:text-[#F875AA] hover:scale-105 transition-all duration-300"
           >
             Book Online
           </Link>
@@ -62,7 +62,7 @@ export default function Navbar() {
 
         {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center">
-          <button onClick={toggleModal} className="text-pink-400 focus:outline-none">
+          <button onClick={toggleModal} className="text-[#F875AA] focus:outline-none">
             <Menu size={40} />
           </button>
         </div>
@@ -90,7 +90,7 @@ export default function Navbar() {
               transition={{ type: 'spring', stiffness: 300, damping: 30 }}
             >
               <div className="flex justify-end mb-4">
-                <button onClick={toggleModal} className="text-pink-400 hover:text-pink-600 transition-colors">
+                <button onClick={toggleModal} className="text-[#F875AA] hover:text-pink-600 transition-colors">
                   <X size={30} />
                 </button>
               </div>
@@ -99,7 +99,7 @@ export default function Navbar() {
               <Link
                 href="/"
                 onClick={toggleModal}
-                className="py-2 px-4 text-lg font-semibold text-gray-700 hover:bg-pink-100 hover:text-pink-500 rounded-md transition-all duration-200"
+                className="py-2 px-4 text-lg font-semibold text-gray-700 hover:bg-pink-100 hover:text-[#F875AA] rounded-md transition-all duration-200"
               >
                 Home
               </Link>
@@ -107,13 +107,13 @@ export default function Navbar() {
               <div>
                 <button
                   onClick={toggleServices}
-                  className="py-2 px-4 text-lg font-semibold text-gray-700 hover:bg-pink-100 hover:text-pink-500 rounded-md w-full text-left transition-all duration-200 flex justify-between items-center"
+                  className="py-2 px-4 text-lg font-semibold text-gray-700 hover:bg-pink-100 hover:text-[#F875AA] rounded-md w-full text-left transition-all duration-200 flex justify-between items-center"
                 >
                   Services
                   {servicesOpen ? (
-                    <ChevronUp size={24} className="text-pink-400" />
+                    <ChevronUp size={24} className="text-[#F875AA]" />
                   ) : (
-                    <ChevronDown size={24} className="text-pink-400" />
+                    <ChevronDown size={24} className="text-[#F875AA]" />
                   )}
                 </button>
 
@@ -129,34 +129,34 @@ export default function Navbar() {
                       <Link
                         href="/services/gum-disease"
                         onClick={toggleModal}
-                        className="py-2 px-3 text-md text-gray-600 hover:bg-pink-50 hover:text-pink-400 rounded-md transition-all duration-200"
+                        className="py-2 px-3 text-md text-gray-600 hover:bg-pink-50 hover:text-[#F875AA] rounded-md transition-all duration-200"
                       >
                         Gum Disease Treatment
                       </Link>
                       <Link
                         href="/services/dental-implants"
                         onClick={toggleModal}
-                        className="py-2 px-3 text-md text-gray-600 hover:bg-pink-50 hover:text-pink-400 rounded-md transition-all duration-200"
+                        className="py-2 px-3 text-md text-gray-600 hover:bg-pink-50 hover:text-[#F875AA] rounded-md transition-all duration-200"
                       >
                         Dental Implants
                       </Link>
                       <Link
                         href="/services/full-mouth-rehabilitation"
                         onClick={toggleModal}
-                        className="py-2 px-3 text-md text-gray-600 hover:bg-pink-50 hover:text-pink-400 rounded-md transition-all duration-200"
+                        className="py-2 px-3 text-md text-gray-600 hover:bg-pink-50 hover:text-[#F875AA] rounded-md transition-all duration-200"
                       >
                         Full Mouth Rehabilitation
                       </Link>
                       <Link
                         href="/services/full-mouth-rehabilitation"
                         onClick={toggleModal}
-                        className="py-2 px-3 text-md text-gray-600 hover:bg-pink-50 hover:text-pink-400 rounded-md transition-all duration-200"
+                        className="py-2 px-3 text-md text-gray-600 hover:bg-pink-50 hover:text-[#F875AA] rounded-md transition-all duration-200"
                       >
                         Laser Dentistry
                       </Link>                      <Link
                         href="/services/full-mouth-rehabilitation"
                         onClick={toggleModal}
-                        className="py-2 px-3 text-md text-gray-600 hover:bg-pink-50 hover:text-pink-400 rounded-md transition-all duration-200"
+                        className="py-2 px-3 text-md text-gray-600 hover:bg-pink-50 hover:text-[#F875AA] rounded-md transition-all duration-200"
                       >
                         Dental Tourism
                       </Link>
@@ -168,7 +168,7 @@ export default function Navbar() {
               <Link
                 href="/about-us"
                 onClick={toggleModal}
-                className="py-2 px-4 text-lg font-semibold text-gray-700 hover:bg-pink-100 hover:text-pink-500 rounded-md transition-all duration-200"
+                className="py-2 px-4 text-lg font-semibold text-gray-700 hover:bg-pink-100 hover:text-[#F875AA] rounded-md transition-all duration-200"
               >
                 About Us
               </Link>
@@ -176,14 +176,14 @@ export default function Navbar() {
               <Link
                 href="/contact-us"
                 onClick={toggleModal}
-                className="py-2 px-4 text-lg font-semibold text-gray-700 hover:bg-pink-100 hover:text-pink-500 rounded-md transition-all duration-200"
+                className="py-2 px-4 text-lg font-semibold text-gray-700 hover:bg-pink-100 hover:text-[#F875AA] rounded-md transition-all duration-200"
               >
                 Contact Us
               </Link>
               <Link
                 href="/book-online"
                 onClick={toggleModal}
-                className="py-2 px-4 text-lg font-semibold text-gray-700 hover:bg-pink-100 hover:text-pink-500 rounded-md transition-all duration-200 md:hidden"
+                className="py-2 px-4 text-lg font-semibold text-gray-700 hover:bg-pink-100 hover:text-[#F875AA] rounded-md transition-all duration-200 md:hidden"
               >
                 Book Online
               </Link>

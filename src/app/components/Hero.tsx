@@ -40,7 +40,7 @@ export default function Hero() {
                 >
                     <Link
                         href="/book-online"
-                        className="flex items-center gap-2 bg-pink-400 hover:bg-pink-500 text-white font-semibold py-5 px-6 rounded-3xl transition-all duration-300"
+                        className="flex items-center gap-2 bg-[#F875AA] hover:bg-[#F875AA] text-white font-semibold py-5 px-6 rounded-3xl transition-all duration-300"
                     >
                         <Calendar size={20} />
                         Request Appointment
@@ -48,7 +48,7 @@ export default function Hero() {
 
                     <a
                         href="tel:+919999999999"
-                        className="flex items-center gap-2 bg-pink-400 hover:bg-pink-500 text-white font-semibold py-5 px-12 rounded-3xl transition-all duration-300"
+                        className="flex items-center gap-2 bg-[#F875AA] hover:bg-[#F875AA] text-white font-semibold py-5 px-12 rounded-3xl transition-all duration-300"
                     >
                         <Phone size={20} />
                         +91 9999999999

@@ -42,7 +42,7 @@ const Card = ({ index, imageSrc, title, description, link, alt }: CardProps) => 
                 transition={{ duration: 1 }}
             >
                 <motion.h2
-                    className="text-2xl font-bold text-pink-400 mb-4"
+                    className="text-2xl font-bold text-[#F875AA] mb-4"
                     initial={{ opacity: 0, y: -30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -59,7 +59,7 @@ const Card = ({ index, imageSrc, title, description, link, alt }: CardProps) => 
                     transition={{ duration: 1 }}
                 >
                     {description.map((text: string, idx: number) => (
-                        <p key={idx} className="text-lg font-semibold text-pink-400">
+                        <p key={idx} className="text-lg font-semibold text-[#F875AA]">
                             {text}
                         </p>
                     ))}
@@ -73,7 +73,7 @@ const Card = ({ index, imageSrc, title, description, link, alt }: CardProps) => 
                 >
                     <Link
                         href={link}
-                        className="inline-block bg-gradient-to-r from-pink-400 to-pink-500 hover:from-pink-500 hover:to-pink-600 text-white font-bold py-3 px-8 rounded-full shadow-md hover:shadow-lg transition-all duration-300"
+                        className="inline-block bg-gradient-to-r from-[#F875AA] to-[#F875AA] hover:from-[#F875AA] hover:to-pink-600 text-white font-bold py-3 px-8 rounded-full shadow-md hover:shadow-lg transition-all duration-300"
                     >
                         LEARN MORE
                     </Link>

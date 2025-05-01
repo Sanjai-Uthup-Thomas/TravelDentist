@@ -38,12 +38,12 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="space-y-2">
-            <h4 className="text-lg font-semibold text-pink-600">Quick Links</h4>
+            <h4 className="text-lg font-semibold text-[#F875AA]">Quick Links</h4>
             <ul className="space-y-2">
-              <li><Link href="/" className="hover:text-pink-400 transition">Home</Link></li>
-              <li><Link href="/about" className="hover:text-pink-400 transition">About Us</Link></li>
-              {/* <li><Link href="/services" className="hover:text-pink-400 transition">Services</Link></li> */}
-              <li><Link href="/contact" className="hover:text-pink-400 transition">Contact</Link></li>
+              <li><Link href="/" className="hover:text-[#F875AA] transition">Home</Link></li>
+              <li><Link href="/about-us" className="hover:text-[#F875AA] transition">About Us</Link></li>
+              {/* <li><Link href="/services" className="hover:text-[#F875AA] transition">Services</Link></li> */}
+              <li><Link href="/contact-us" className="hover:text-[#F875AA] transition">Contact</Link></li>
             </ul>
           </div>
 
@@ -51,11 +51,11 @@ const Footer = () => {
           <div className="space-y-2">
             <h4 className="text-lg font-semibold text-pink-600">Our Services</h4>
             <ul className="space-y-2">
-              <li><Link href="/services/gum-treatment" className="hover:text-pink-400 transition">Gum Disease Treatment</Link></li>
-              <li><Link href="/services/implants" className="hover:text-pink-400 transition">Dental Implants</Link></li>
-              <li><Link href="/services/Full-mouth-rehabilitation" className="hover:text-pink-400 transition">Full mouth rehabilitation</Link></li>
-              <li><Link href="/services/Laser-dentistry" className="hover:text-pink-400 transition">Laser Dentistry</Link></li>
-              <li><Link href="/services/Dental-tourism" className="hover:text-pink-400 transition">Dental Tourism</Link></li>
+              <li><Link href="/services/gum-treatment" className="hover:text-[#F875AA] transition">Gum Disease Treatment</Link></li>
+              <li><Link href="/services/implants" className="hover:text-[#F875AA] transition">Dental Implants</Link></li>
+              <li><Link href="/services/Full-mouth-rehabilitation" className="hover:text-[#F875AA] transition">Full mouth rehabilitation</Link></li>
+              <li><Link href="/services/Laser-dentistry" className="hover:text-[#F875AA] transition">Laser Dentistry</Link></li>
+              <li><Link href="/services/Dental-tourism" className="hover:text-[#F875AA] transition">Dental Tourism</Link></li>
 
             </ul>
           </div>
@@ -69,7 +69,7 @@ const Footer = () => {
               <p>Phone: (123) 456-7890</p>
               <p>Email: info@dentalwellness.com</p>
             </address>
-            <button className="bg-pink-400 hover:bg-pink-500 text-white px-4 py-2 rounded-full text-sm font-medium transition">
+            <button className="bg-[#F875AA] hover:bg-[#F875AA] text-white px-4 py-2 rounded-full text-sm font-medium transition">
               Book Appointment
             </button>
           </div>
@@ -79,8 +79,8 @@ const Footer = () => {
         <div className="border-t border-pink-200 mt-8 pt-6 text-center text-sm text-pink-600">
           <p>© {new Date().getFullYear()} Travel Dentist. All rights reserved.</p>
           <div className="mt-2 flex justify-center space-x-4">
-            <Link href="/privacy" className="hover:text-pink-400 transition">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-pink-400 transition">Terms of Service</Link>
+            <Link href="/privacy" className="hover:text-[#F875AA] transition">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-[#F875AA] transition">Terms of Service</Link>
           </div>
         </div>
       </div>

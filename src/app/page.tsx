@@ -86,7 +86,7 @@ export default function Home() {
           transition={{ duration: 0.6 }}
           className="h-60 bg-white flex items-center justify-center"
         >
-          <h1 className="text-pink-500 text-2xl font-bold text-center">
+          <h1 className="text-[#F875AA] text-2xl font-bold text-center">
             THE TRAVEL DENTIST DIFFERENCE
           </h1>
         </motion.div>
@@ -96,7 +96,7 @@ export default function Home() {
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="h-60 bg-pink-400 rounded-t-3xl md:rounded-t-none md:rounded-l-3xl flex flex-col items-center justify-center"
+          className="h-60 bg-[#F875AA] rounded-t-3xl md:rounded-t-none md:rounded-l-3xl flex flex-col items-center justify-center"
         >
           <Image src={QualityIcon} alt="Quality Icon" width={48} height={48} />
           <h1 className="text-white text-2xl font-bold text-center mt-2">QUALITY</h1>
@@ -108,7 +108,7 @@ export default function Home() {
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="h-60 bg-pink-400 flex flex-col items-center justify-center"
+          className="h-60 bg-[#F875AA] flex flex-col items-center justify-center"
         >
           <Image src={ComfortIcon} alt="Comfort Icon" width={48} height={48} />
           <h1 className="text-white text-2xl font-bold text-center mt-2">COMFORT</h1>
@@ -120,7 +120,7 @@ export default function Home() {
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="h-60 bg-pink-400 flex flex-col items-center justify-center"
+          className="h-60 bg-[#F875AA] flex flex-col items-center justify-center"
         >
           <Image src={TechnologyIcon} alt="Technology Icon" width={48} height={48} />
           <h1 className="text-white text-2xl font-bold text-center mt-2">TECHNOLOGY</h1>
@@ -128,7 +128,7 @@ export default function Home() {
         </motion.div>
 
       </div>
-      <div className="min-h-[500px] bg-pink-400 mt-10 flex flex-col md:flex-row items-center justify-center gap-6 px-4 md:px-20 overflow-hidden">
+      <div className="min-h-[500px] bg-[#F875AA] mt-10 flex flex-col md:flex-row items-center justify-center gap-6 px-4 md:px-20 overflow-hidden">
 
         {/* Left Box - Animated Image */}
         <motion.div
@@ -168,23 +168,92 @@ export default function Home() {
         </motion.div>
       </div>
       <div className="h-[200px] flex items-center justify-center bg-white">
-        <h1 className="text-4xl md:text-5xl font-bold text-pink-500 tracking-wide">
+        <h1 className="text-4xl md:text-5xl font-bold text-[#F875AA] tracking-wide">
           SERVICES
         </h1>
       </div>
       <>
-      {sections.map((section, index) => (
-        <Card
-          key={index}
-          index={index}
-          imageSrc={section.imageSrc}
-          title={section.title}
-          description={section.description}
-          link={section.link}
-          alt={section.alt}
-        />
-      ))}
-    </>
+        {sections.map((section, index) => (
+          <Card
+            key={index}
+            index={index}
+            imageSrc={section.imageSrc}
+            title={section.title}
+            description={section.description}
+            link={section.link}
+            alt={section.alt}
+          />
+        ))}
+      </>
+      <div>
+        <div className="h-[200px] flex items-center justify-center bg-white">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#F875AA] tracking-wide">
+            TESTIMONIALS
+          </h1>
+        </div>
+
+        <div className="flex flex-wrap gap-6 justify-center">
+          {/* Box 1 */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="flex flex-col items-center bg-white shadow-lg rounded-xl p-6 max-w-sm"
+          >
+            <Image
+              src="https://randomuser.me/api/portraits/women/44.jpg"
+              alt="Person 1"
+              width={100}
+              height={100}
+              className="rounded-full object-cover mb-4"
+            />
+            <p className="text-center text-pink-600 hover:text-[#F875AA] transition">
+              "Amazing service! The doctors and staff were very friendly and professional."
+            </p>
+          </motion.div>
+
+          {/* Box 2 */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="flex flex-col items-center bg-white shadow-lg rounded-xl p-6 max-w-sm"
+          >
+            <Image
+              src="https://randomuser.me/api/portraits/men/32.jpg"
+              alt="Person 2"
+              width={100}
+              height={100}
+              className="rounded-full object-cover mb-4"
+            />
+            <p className="text-center text-pink-600 hover:text-[#F875AA] transition">
+              "Painless experience and great care. Highly recommend this dental clinic!"
+            </p>
+          </motion.div>
+
+          {/* Box 3 */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="flex flex-col items-center bg-white shadow-lg rounded-xl p-6 max-w-sm"
+          >
+            <Image
+              src="https://randomuser.me/api/portraits/women/68.jpg"
+              alt="Person 3"
+              width={100}
+              height={100}
+              className="rounded-full object-cover mb-4"
+            />
+            <p className="text-center text-pink-600 hover:text-[#F875AA] transition">
+              "State-of-the-art technology and warm hospitality. Truly the best!"
+            </p>
+          </motion.div>
+        </div>
+      </div>
       <Footer />
     </div>
   );
