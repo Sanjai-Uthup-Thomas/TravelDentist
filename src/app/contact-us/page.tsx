@@ -82,7 +82,7 @@ export default function ContactUs() {
 
           {/* Contact Form */}
           <div className="bg-[#F875AA] text-white rounded-2xl p-8 flex-1 shadow-md">
-            <h2 className="text-2xl font-bold mb-6 text-center">Let's Connect</h2>
+          <h2 className="text-2xl font-bold mb-6 text-center">Let&apos;s Connect</h2>
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
 
               {/* Name */}

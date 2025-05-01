@@ -209,7 +209,7 @@ export default function Home() {
               className="rounded-full object-cover mb-4"
             />
             <p className="text-center text-pink-600 hover:text-[#F875AA] transition">
-              "Amazing service! The doctors and staff were very friendly and professional."
+              Amazing service! The doctors and staff were very friendly and professional.
             </p>
           </motion.div>
 
@@ -229,7 +229,7 @@ export default function Home() {
               className="rounded-full object-cover mb-4"
             />
             <p className="text-center text-pink-600 hover:text-[#F875AA] transition">
-              "Painless experience and great care. Highly recommend this dental clinic!"
+              Painless experience and great care. Highly recommend this dental clinic!
             </p>
           </motion.div>
 
@@ -249,7 +249,7 @@ export default function Home() {
               className="rounded-full object-cover mb-4"
             />
             <p className="text-center text-pink-600 hover:text-[#F875AA] transition">
-              "State-of-the-art technology and warm hospitality. Truly the best!"
+              State-of-the-art technology and warm hospitality. Truly the best!
             </p>
           </motion.div>
         </div>
