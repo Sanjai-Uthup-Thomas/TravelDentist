@@ -127,34 +127,34 @@ export default function Navbar() {
                     >
                       {/* Service Sub-links */}
                       <Link
-                        href="/services/gum-disease"
+                        href="/gum-disease-treatment"
                         onClick={toggleModal}
                         className="py-2 px-3 text-md text-gray-600 hover:bg-pink-50 hover:text-[#F875AA] rounded-md transition-all duration-200"
                       >
                         Gum Disease Treatment
                       </Link>
                       <Link
-                        href="/services/dental-implants"
+                        href="/dental-implants"
                         onClick={toggleModal}
                         className="py-2 px-3 text-md text-gray-600 hover:bg-pink-50 hover:text-[#F875AA] rounded-md transition-all duration-200"
                       >
                         Dental Implants
                       </Link>
                       <Link
-                        href="/services/full-mouth-rehabilitation"
+                        href="/full-mouth-rehabilitation"
                         onClick={toggleModal}
                         className="py-2 px-3 text-md text-gray-600 hover:bg-pink-50 hover:text-[#F875AA] rounded-md transition-all duration-200"
                       >
                         Full Mouth Rehabilitation
                       </Link>
                       <Link
-                        href="/services/full-mouth-rehabilitation"
+                        href="/laser-dentistry"
                         onClick={toggleModal}
                         className="py-2 px-3 text-md text-gray-600 hover:bg-pink-50 hover:text-[#F875AA] rounded-md transition-all duration-200"
                       >
                         Laser Dentistry
                       </Link>                      <Link
-                        href="/services/full-mouth-rehabilitation"
+                        href="/dental-tourism"
                         onClick={toggleModal}
                         className="py-2 px-3 text-md text-gray-600 hover:bg-pink-50 hover:text-[#F875AA] rounded-md transition-all duration-200"
                       >
