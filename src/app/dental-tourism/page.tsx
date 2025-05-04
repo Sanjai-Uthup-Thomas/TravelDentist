@@ -23,7 +23,7 @@ export default function DentalTourism() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="max-w-6xl mx-auto px-4 py-12"
+                className="max-w-5xl mx-auto px-4 py-10"
             >
                 <h1 className="text-4xl md:text-5xl font-bold text-center text-[#F875AA] mb-10">Dental Tourism</h1>
 
@@ -94,7 +94,7 @@ export default function DentalTourism() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: 0.6 }}
-                    className="bg-gradient-to-r from-pink-300 via-pink-200 to-pink-100 text-center p-8 mt-16 rounded-2xl shadow-lg"
+                    className="bg-gradient-to-r from-pink-300 via-pink-200 to-pink-100 text-center p-8 rounded-2xl shadow-lg mt-10 "
                 >
                     <p className="text-2xl font-semibold mb-4 text-pink-900">
                         Interested in exploring Kerala while taking care of your dental health?

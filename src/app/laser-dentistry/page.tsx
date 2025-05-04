@@ -13,7 +13,7 @@ export default function LaserDentistryPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="max-w-6xl mx-auto px-6 py-12 relative z-10"
+                className="max-w-5xl mx-auto px-4 py-10"
             >
                 {/* Heading */}
                 <h1 className="text-4xl md:text-5xl font-extrabold text-center text-[#F875AA] mb-10 leading-tight">
@@ -66,7 +66,7 @@ export default function LaserDentistryPage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: 0.2 }}
-                    className="bg-gradient-to-r from-pink-200 via-pink-100 to-pink-50 text-center p-10 rounded-2xl shadow-lg mt-16"
+                    className="bg-gradient-to-r from-pink-300 via-pink-200 to-pink-100 text-center p-8 rounded-2xl shadow-lg "
                 >
                     <p className="text-3xl font-bold mb-4 text-pink-900">
                         Ready for stress-free dental care?

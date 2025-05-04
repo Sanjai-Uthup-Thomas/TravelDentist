@@ -9,7 +9,7 @@ export default function FullMouthRehabilitationPage() {
   return (
     <div className="relative min-h-screen bg-gradient-to-b from-[#fff0f5] to-white text-gray-900">
       <Navbar />
-      <div className="h-20 md:h-32" />
+      <div className="h-20 md:h-50" />
 
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -18,7 +18,7 @@ export default function FullMouthRehabilitationPage() {
         className="max-w-5xl mx-auto px-4 py-10"
       >
         <h1 className="text-4xl md:text-5xl font-bold text-center text-[#F875AA] mb-10">
-          Full Mouth Rehabilitation (FMR)
+          Full Mouth Rehabilitation
         </h1>
 
         <section className="space-y-10">
@@ -88,7 +88,7 @@ export default function FullMouthRehabilitationPage() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.3 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-r from-pink-200 via-pink-100 to-pink-50 text-center p-10 rounded-2xl shadow-lg mt-16"
+            className="bg-gradient-to-r from-pink-300 via-pink-200 to-pink-100 text-center p-8 rounded-2xl shadow-lg "
           >
             <p className="text-xl font-semibold mb-4 text-pink-900">
               Considering Full Mouth Rehabilitation?

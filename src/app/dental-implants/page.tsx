@@ -101,7 +101,7 @@ export default function DentalImplantsPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="bg-gradient-to-r from-pink-300 via-pink-200 to-pink-100 text-center p-8 rounded-2xl shadow-lg mt-10"
+           className="bg-gradient-to-r from-pink-300 via-pink-200 to-pink-100 text-center p-8 rounded-2xl shadow-lg "
           >
             <p className="text-xl font-semibold mb-4 text-pink-900">
               Have questions about dental implants?

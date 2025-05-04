@@ -51,11 +51,11 @@ const Footer = () => {
           <div className="space-y-2">
             <h4 className="text-lg font-semibold text-pink-600">Our Services</h4>
             <ul className="space-y-2">
-              <li><Link href="/services/gum-treatment" className="hover:text-[#F875AA] transition">Gum Disease Treatment</Link></li>
-              <li><Link href="/services/implants" className="hover:text-[#F875AA] transition">Dental Implants</Link></li>
-              <li><Link href="/services/Full-mouth-rehabilitation" className="hover:text-[#F875AA] transition">Full mouth rehabilitation</Link></li>
-              <li><Link href="/services/Laser-dentistry" className="hover:text-[#F875AA] transition">Laser Dentistry</Link></li>
-              <li><Link href="/services/Dental-tourism" className="hover:text-[#F875AA] transition">Dental Tourism</Link></li>
+              <li><Link href="/gum-disease-treatment" className="hover:text-[#F875AA] transition">Gum Disease Treatment</Link></li>
+              <li><Link href="/dental-implants" className="hover:text-[#F875AA] transition">Dental Implants</Link></li>
+              <li><Link href="/full-mouth-rehabilitation" className="hover:text-[#F875AA] transition">Full mouth rehabilitation</Link></li>
+              <li><Link href="/laser-dentistry" className="hover:text-[#F875AA] transition">Laser Dentistry</Link></li>
+              <li><Link href="/dental-tourism" className="hover:text-[#F875AA] transition">Dental Tourism</Link></li>
 
             </ul>
           </div>
@@ -79,8 +79,8 @@ const Footer = () => {
         <div className="border-t border-pink-200 mt-8 pt-6 text-center text-sm text-pink-600">
           <p>© {new Date().getFullYear()} Travel Dentist. All rights reserved.</p>
           <div className="mt-2 flex justify-center space-x-4">
-            <Link href="/privacy" className="hover:text-[#F875AA] transition">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-[#F875AA] transition">Terms of Service</Link>
+            <Link href="/privacy-policy" className="hover:text-[#F875AA] transition">Privacy Policy</Link>
+            <Link href="/terms-service" className="hover:text-[#F875AA] transition">Terms of Service</Link>
           </div>
         </div>
       </div>

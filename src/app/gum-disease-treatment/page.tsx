@@ -14,7 +14,7 @@ export default function GumDiseaseTreatment() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="max-w-6xl mx-auto px-4 py-12"
+                className="max-w-5xl mx-auto px-4 py-10"
             >
                 <h1 className="text-4xl md:text-5xl font-bold text-center text-[#F875AA] mb-10">Gum Disease Treatment</h1>
 
