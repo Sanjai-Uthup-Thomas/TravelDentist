@@ -53,7 +53,7 @@ export default function Navbar() {
         {/* Right link */}
         <div className="hidden md:flex absolute right-0 bottom-0 transform -translate-x-1/2 mb-3">
           <Link
-            href="/book-online"
+            href="/contact-us"
             className="text-[#F875AA] font-bold text-2xl bg-white border-2 border-pink-300 rounded-full px-6 py-2 shadow-lg hover:bg-pink-100 hover:text-[#F875AA] hover:scale-105 transition-all duration-300"
           >
             Book Online
@@ -181,7 +181,7 @@ export default function Navbar() {
                 Contact Us
               </Link>
               <Link
-                href="/book-online"
+                href="/contact-us"
                 onClick={toggleModal}
                 className="py-2 px-4 text-lg font-semibold text-gray-700 hover:bg-pink-100 hover:text-[#F875AA] rounded-md transition-all duration-200 md:hidden"
               >

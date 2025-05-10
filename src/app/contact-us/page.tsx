@@ -1,14 +1,16 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
+import toast, { Toaster } from 'react-hot-toast';
+import Lottie from 'lottie-react';
+import loaderAnimation from '../../../public/loader.json'; // Place your Lottie JSON here
 
-// Zod validation schema
 const contactSchema = z.object({
   name: z.string().min(1, 'Name is required'),
   email: z.string().email('Invalid email address'),
@@ -22,6 +24,8 @@ const contactSchema = z.object({
 type ContactFormData = z.infer<typeof contactSchema>;
 
 export default function ContactUs() {
+  const [isLoading, setIsLoading] = useState(false);
+
   const {
     register,
     handleSubmit,
@@ -31,25 +35,49 @@ export default function ContactUs() {
     resolver: zodResolver(contactSchema),
   });
 
-  const onSubmit = (data: ContactFormData) => {
-    console.log('Form Submitted:', data);
-    reset();
+  const onSubmit = async (data: ContactFormData) => {
+    setIsLoading(true);
+    const toastId = toast.loading('Sending your message...');
+
+    try {
+      const res = await fetch('/api/contactUs', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      if (res.ok) {
+        toast.success('Message sent successfully!', { id: toastId });
+        reset();
+      } else {
+        toast.error('Failed to send message.', { id: toastId });
+      }
+    } catch (err) {
+      console.log(err)
+      toast.error('Something went wrong.', { id: toastId });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
-  return (
+  return isLoading ? (
+    <div className="flex items-center justify-center h-screen bg-white">
+      <Lottie animationData={loaderAnimation} loop={true} className="w-52 h-52" />
+    </div>
+  ) : (
     <div className="relative min-h-screen bg-white">
       <Navbar />
+      <Toaster position="top-center" />
       <div className="h-30 md:h-70" />
-
+  
       {/* Header */}
       <div className="text-center mb-10">
         <h1 className="text-4xl md:text-5xl font-extrabold text-[#F875AA]">CONTACT US</h1>
       </div>
-
+  
       {/* Contact Section */}
       <div className="px-4 pb-20">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-8">
-
           {/* Contact Info */}
           <div className="bg-[#F875AA] text-white rounded-2xl p-8 flex-1 shadow-md">
             <div className="space-y-8 text-lg">
@@ -79,13 +107,12 @@ export default function ContactUs() {
               </div>
             </div>
           </div>
-
+  
           {/* Contact Form */}
-          <div className="bg-[#F875AA] text-white rounded-2xl p-8 flex-1 shadow-md">
-          <h2 className="text-2xl font-bold mb-6 text-center">Let&apos;s Connect</h2>
+          <div className="bg-[#F875AA] text-white rounded-2xl p-8 flex-1 shadow-md relative">
+            <h2 className="text-2xl font-bold mb-6 text-center">Let&apos;s Connect</h2>
+  
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
-
-              {/* Name */}
               <div>
                 <input
                   {...register('name')}
@@ -94,8 +121,7 @@ export default function ContactUs() {
                 />
                 {errors.name && <p className="text-white text-sm mt-1">{errors.name.message}</p>}
               </div>
-
-              {/* Email */}
+  
               <div>
                 <input
                   {...register('email')}
@@ -105,8 +131,7 @@ export default function ContactUs() {
                 />
                 {errors.email && <p className="text-white text-sm mt-1">{errors.email.message}</p>}
               </div>
-
-              {/* Phone */}
+  
               <div>
                 <input
                   {...register('phone')}
@@ -116,8 +141,7 @@ export default function ContactUs() {
                 />
                 {errors.phone && <p className="text-white text-sm mt-1">{errors.phone.message}</p>}
               </div>
-
-              {/* Message */}
+  
               <div>
                 <textarea
                   {...register('message')}
@@ -127,20 +151,18 @@ export default function ContactUs() {
                 />
                 {errors.message && <p className="text-white text-sm mt-1">{errors.message.message}</p>}
               </div>
-
-              {/* Submit */}
+  
               <button
                 type="submit"
-                className="w-full bg-white text-pink-600 font-bold py-2 rounded-md hover:bg-gray-100 transition"
+                disabled={isLoading}
+                className="w-full bg-white text-[#F875AA] font-bold py-2 rounded-md hover:bg-gray-100 transition disabled:opacity-50"
               >
                 Submit
               </button>
             </form>
           </div>
-
         </div>
       </div>
-
       <Footer />
     </div>
   );

@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="relative min-h-screen bg-gradient-to-b from-white to-[#fff0f5] text-gray-900">
+    <div className="relative min-h-screen bg-gradient-to-b from-[#fff0f5] to-white text-gray-900">
       <Navbar />
       <div className="h-20 md:h-50" />
 
@@ -23,7 +23,7 @@ export default function PrivacyPolicyPage() {
 
         <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
           <p>
-            At [Your Clinic Name], we value your privacy. This Privacy Policy outlines how we collect, use, disclose, and safeguard your personal information when you visit our website or engage with our services.
+            At travel dentist, we value your privacy. This Privacy Policy outlines how we collect, use, disclose, and safeguard your personal information when you visit our website or engage with our services.
           </p>
 
           <h2 className="text-2xl font-semibold text-[#F875AA]">Information We Collect</h2>
@@ -66,7 +66,7 @@ export default function PrivacyPolicyPage() {
             If you have any questions regarding this Privacy Policy, please contact us at:
           </p>
           <ul className="list-none ml-4">
-            <li>Email: youremail@example.com</li>
+            <li>Email: traveldentist.in@gmail.com</li>
             <li>Phone: +91-XXXXXXXXXX</li>
             <li>Address: [Your Clinic Address]</li>
           </ul>

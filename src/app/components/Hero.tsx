@@ -39,7 +39,7 @@ export default function Hero() {
                     className="flex flex-col sm:flex-row gap-10 items-center justify-center mt-6"
                 >
                     <Link
-                        href="/book-online"
+                        href="/contact-us"
                         className="flex items-center gap-2 bg-[#F875AA] hover:bg-[#F875AA] text-white font-semibold py-5 px-6 rounded-3xl transition-all duration-300"
                     >
                         <Calendar size={20} />

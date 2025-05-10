@@ -8,18 +8,18 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-8">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          
+
           {/* Clinic Info */}
           <div className="space-y-4">
-          <Link href="/">
-            <Image
-              src={logo}
-              alt="Logo"
-              width={210}
-              height={210}
-              className="object-contain w-[100px] h-auto md:w-[210px]"
-            />
-          </Link>
+            <Link href="/">
+              <Image
+                src={logo}
+                alt="Logo"
+                width={210}
+                height={210}
+                className="object-contain w-[100px] h-auto md:w-[210px]"
+              />
+            </Link>
             {/* <div className="flex space-x-4">
               <a href="#" className="text-pink-600 hover:text-pink-800">
                 <span className="sr-only">Facebook</span>
@@ -69,9 +69,13 @@ const Footer = () => {
               <p>Phone: (123) 456-7890</p>
               <p>Email: info@dentalwellness.com</p>
             </address>
-            <button className="bg-[#F875AA] hover:bg-[#F875AA] text-white px-4 py-2 rounded-full text-sm font-medium transition">
+            <Link
+              href="/contact-us"
+              className="bg-[#F875AA] hover:bg-[#F875AA] text-white px-4 py-2 rounded-full text-sm font-medium transition"
+            >
               Book Appointment
-            </button>
+            </Link>
+
           </div>
         </div>
 

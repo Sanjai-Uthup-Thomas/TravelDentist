@@ -7,7 +7,7 @@ import { motion } from "framer-motion"; // 👈 import motion
 import QualityIcon from '../../public/Quality.svg';
 import ComfortIcon from '../../public/Comfort.svg';
 import TechnologyIcon from '../../public/Technology.svg';
-import Image1 from '../../public/Image1.jpg';
+import Image1 from '../../public/Image.jpg';
 import GUM_DISEASE_TREATMENT from '../../public/GUM-DISEASE-TREATMENT.jpg';
 import dentalImplants from '../../public/dentalImplants.webp';
 import keralaTourism from '../../public/keralaTourism.png';
@@ -138,7 +138,7 @@ export default function Home() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          <div className="w-full max-w-[500px] pt-10">
+          <div className="w-full max-w-[500px] py-10">
             <Image
               src={Image1}
               alt="Comfort Icon"
@@ -193,66 +193,49 @@ export default function Home() {
         </div>
 
         <div className="flex flex-wrap gap-6 justify-center">
-          {/* Box 1 */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="flex flex-col items-center bg-white shadow-lg rounded-xl p-6 max-w-sm"
-          >
-            <Image
-              src="https://randomuser.me/api/portraits/women/44.jpg"
-              alt="Person 1"
-              width={100}
-              height={100}
-              className="rounded-full object-cover mb-4"
-            />
-            <p className="text-center text-pink-600 hover:text-[#F875AA] transition">
-              Amazing service! The doctors and staff were very friendly and professional.
-            </p>
-          </motion.div>
+  {/* Box 1 */}
+  <motion.div
+    initial={{ opacity: 0, scale: 0.8 }}
+    whileInView={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.5 }}
+    viewport={{ once: true }}
+    className="flex flex-col items-center bg-white shadow-lg rounded-xl p-6 max-w-sm"
+  >
+    <p className="text-center text-pink-600 hover:text-[#F875AA] transition">
+      Amazing service! The doctors and staff were very friendly and professional.
+    </p>
+    <p className="mt-4 text-sm text-gray-500">— Aisha Mathew</p>
+  </motion.div>
 
-          {/* Box 2 */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="flex flex-col items-center bg-white shadow-lg rounded-xl p-6 max-w-sm"
-          >
-            <Image
-              src="https://randomuser.me/api/portraits/men/32.jpg"
-              alt="Person 2"
-              width={100}
-              height={100}
-              className="rounded-full object-cover mb-4"
-            />
-            <p className="text-center text-pink-600 hover:text-[#F875AA] transition">
-              Painless experience and great care. Highly recommend this dental clinic!
-            </p>
-          </motion.div>
+  {/* Box 2 */}
+  <motion.div
+    initial={{ opacity: 0, scale: 0.8 }}
+    whileInView={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.6, delay: 0.2 }}
+    viewport={{ once: true }}
+    className="flex flex-col items-center bg-white shadow-lg rounded-xl p-6 max-w-sm"
+  >
+    <p className="text-center text-pink-600 hover:text-[#F875AA] transition">
+      Painless experience and great care. Highly recommend this dental clinic!
+    </p>
+    <p className="mt-4 text-sm text-gray-500">— Rahul Nair</p>
+  </motion.div>
 
-          {/* Box 3 */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="flex flex-col items-center bg-white shadow-lg rounded-xl p-6 max-w-sm"
-          >
-            <Image
-              src="https://randomuser.me/api/portraits/women/68.jpg"
-              alt="Person 3"
-              width={100}
-              height={100}
-              className="rounded-full object-cover mb-4"
-            />
-            <p className="text-center text-pink-600 hover:text-[#F875AA] transition">
-              State-of-the-art technology and warm hospitality. Truly the best!
-            </p>
-          </motion.div>
-        </div>
+  {/* Box 3 */}
+  <motion.div
+    initial={{ opacity: 0, scale: 0.8 }}
+    whileInView={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.6, delay: 0.4 }}
+    viewport={{ once: true }}
+    className="flex flex-col items-center bg-white shadow-lg rounded-xl p-6 max-w-sm"
+  >
+    <p className="text-center text-pink-600 hover:text-[#F875AA] transition">
+      State-of-the-art technology and warm hospitality. Truly the best!
+    </p>
+    <p className="mt-4 text-sm text-gray-500">— Sneha George</p>
+  </motion.div>
+</div>
+
       </div>
       <Footer />
     </div>

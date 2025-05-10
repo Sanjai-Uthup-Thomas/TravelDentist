@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 export default function TermsOfServicePage() {
   return (
-    <div className="relative min-h-screen bg-gradient-to-b from-white to-[#fff0f5] text-gray-900">
+    <div className="relative min-h-screen bg-gradient-to-b from-[#fff0f5] to-white text-gray-900">
       <Navbar />
       <div className="h-20 md:h-50" />
 
@@ -23,7 +23,7 @@ export default function TermsOfServicePage() {
 
         <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
           <p>
-            Welcome to [Your Clinic Name]! These Terms of Service govern your use of our website and services. By accessing our website, booking appointments, or using our services, you agree to these Terms.
+            Welcome to travel dentist! These Terms of Service govern your use of our website and services. By accessing our website, booking appointments, or using our services, you agree to these Terms.
           </p>
 
           <h2 className="text-2xl font-semibold text-[#F875AA]">1. Use of Services</h2>
@@ -45,12 +45,12 @@ export default function TermsOfServicePage() {
 
           <h2 className="text-2xl font-semibold text-[#F875AA]">4. Intellectual Property</h2>
           <p>
-            All content on this website, including text, graphics, logos, and images, is the property of [Your Clinic Name] and is protected by copyright laws. You may not reproduce or use this content without permission.
+            All content on this website, including text, graphics, logos, and images, is the property of travel dentist and is protected by copyright laws. You may not reproduce or use this content without permission.
           </p>
 
           <h2 className="text-2xl font-semibold text-[#F875AA]">5. Limitation of Liability</h2>
           <p>
-            [Your Clinic Name] is not liable for any direct, indirect, or incidental damages arising from the use or inability to use our services or website.
+            Travel dentist is not liable for any direct, indirect, or incidental damages arising from the use or inability to use our services or website.
           </p>
 
           <h2 className="text-2xl font-semibold text-[#F875AA]">6. Modifications to Terms</h2>
@@ -60,7 +60,7 @@ export default function TermsOfServicePage() {
 
           <h2 className="text-2xl font-semibold text-[#F875AA]">7. Governing Law</h2>
           <p>
-            These Terms are governed by the laws of India. Any disputes shall be resolved in the courts of [Your City/State].
+            These Terms are governed by the laws of India. Any disputes shall be resolved in the courts of Kerala.
           </p>
 
           <h2 className="text-2xl font-semibold text-[#F875AA]">8. Contact Us</h2>
@@ -68,7 +68,7 @@ export default function TermsOfServicePage() {
             If you have questions or concerns about these Terms, please contact us:
           </p>
           <ul className="list-none ml-4">
-            <li>Email: youremail@example.com</li>
+            <li>Email: traveldentist.in@gmail.com</li>
             <li>Phone: +91-XXXXXXXXXX</li>
             <li>Address: [Your Clinic Address]</li>
           </ul>
