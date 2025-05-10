@@ -61,22 +61,43 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-pink-600">Contact Us</h4>
-            <address className="not-italic">
-              <p>123 Dental Street</p>
-              <p>Health City, HC 12345</p>
-              <p>Phone: (123) 456-7890</p>
-              <p>Email: info@dentalwellness.com</p>
-            </address>
+          <div className="space-y-6">
+            {/* Clinic Locations in two columns */}
+            <div>
+              <h4 className="text-lg font-semibold text-pink-600 mb-4">Our Locations</h4>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-gray-700">
+                {/* Location 1 */}
+                <div>
+                  <p className="font-medium">SK Dental Clinic</p>
+                  <p>Salem Church Building</p>
+                  <p>Chingavanam, Kottayam</p>
+                </div>
+
+                {/* Location 2 */}
+                <div>
+                  <p className="font-medium">Perio Center</p>
+                  <p>Muttambalam P.O.</p>
+                  <p>Kottayam</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Shared Contact Details */}
+            <div className="space-y-2 text-sm text-gray-700">
+              <p><span className="font-medium">Phone:</span> +91-9035153096</p>
+              <p><span className="font-medium">Email:</span> traveldentist.in@gmail.com</p>
+            </div>
+
+            {/* Button */}
             <Link
               href="/contact-us"
-              className="bg-[#F875AA] hover:bg-[#F875AA] text-white px-4 py-2 rounded-full text-sm font-medium transition"
+              className="bg-[#F875AA] hover:bg-[#F875AA]/90 text-white px-4 py-2 rounded-full text-sm font-medium transition"
             >
               Book Appointment
             </Link>
-
           </div>
+
+
         </div>
 
         {/* Copyright */}

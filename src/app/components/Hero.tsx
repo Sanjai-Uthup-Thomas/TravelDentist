@@ -47,11 +47,11 @@ export default function Hero() {
                     </Link>
 
                     <a
-                        href="tel:+919999999999"
+                        href="tel:+919035153096"
                         className="flex items-center gap-2 bg-[#F875AA] hover:bg-[#F875AA] text-white font-semibold py-5 px-12 rounded-3xl transition-all duration-300"
                     >
                         <Phone size={20} />
-                        +91 9999999999
+                        +91-9035153096
                     </a>
                 </motion.div>
             </motion.div>
