@@ -8,8 +8,10 @@ import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import toast, { Toaster } from 'react-hot-toast';
-import Lottie from 'lottie-react';
-import loaderAnimation from '../../../public/loader.json'; // Place your Lottie JSON here
+// ✅ Dynamically import Lottie only on the client
+const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
+import loaderAnimation from '../../../public/loader.json';
+import dynamic from 'next/dynamic';
 
 const contactSchema = z.object({
   name: z.string().min(1, 'Name is required'),
