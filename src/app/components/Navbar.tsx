@@ -160,6 +160,13 @@ export default function Navbar() {
                       >
                         Dental Tourism
                       </Link>
+                       <Link
+                        href="/gummy-smile-correction"
+                        onClick={toggleModal}
+                        className="py-2 px-3 text-md text-gray-600 hover:bg-pink-50 hover:text-[#F875AA] rounded-md transition-all duration-200"
+                      >
+                        Gummy smile correction
+                      </Link>
                     </motion.div>
                   )}
                 </AnimatePresence>

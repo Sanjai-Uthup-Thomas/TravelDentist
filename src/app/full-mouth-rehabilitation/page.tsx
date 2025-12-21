@@ -43,10 +43,16 @@ export default function FullMouthRehabilitationPage() {
             <h2 className="text-2xl font-semibold text-[#F875AA] mb-4">Who Needs Full Mouth Rehabilitation?</h2>
             <ul className="list-disc ml-6 space-y-2 text-gray-700">
               <li>
-                Loose or mobile teeth often due to gum disease and poor oral hygiene, which can lead to tooth loss.
+              Patients who lack proper occlusion on both sides of the jaws need rehabiliatations to restore the function
               </li>
               <li>
-                Excessive tooth wear or enamel erosion caused by prolonged abrasion or acidic exposure.
+                All missing teeth has to be restored with implants/bridges / cast partial dentures.
+              </li>
+              <li>
+                Loose teeth requires stabilization using splints.
+              </li>
+              <li>
+                Excessive tooth wear or enamel erosion caused by prolonged abrasion/excessive tooth grinding know as bruxism
               </li>
               <li>
                 Night-time teeth grinding (bruxism) leading to jaw, facial, and muscular discomfort.
@@ -79,6 +85,12 @@ export default function FullMouthRehabilitationPage() {
               </li>
               <li>
                 Improves bite alignment and strengthens jaw joints and facial muscles.
+              </li>
+              <li>
+                strengthen joints and relive jaw joints pain.
+              </li>
+              <li>
+                Minimal discomfort during procedures with almost nil complications.
               </li>
             </ul>
           </motion.div>

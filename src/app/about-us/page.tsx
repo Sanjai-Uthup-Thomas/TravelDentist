@@ -97,7 +97,7 @@ export default function AboutUs() {
               <span className="font-medium">Bachelor of Dental Surgery (BDS)</span>, and
               <span className="font-medium"> Masters in Dental Surgery (MDS)</span> in Prosthodontics and Implantology.
               He holds a Fellowship in Oral Implantology from
-              <span className="text-pink-600 font-semibold"> FBDCI, Sweden</span> and has advanced training in
+              <span className="text-pink-600 font-semibold"> FBOCI, Sweden</span> and has advanced training in
               <span className="text-pink-600 font-semibold"> corticobasal implantology</span> from
               <span className="text-pink-600 font-semibold"> IFFID, Switzerland</span>.
               Additionally, he is highly skilled in pterygoid implants and the nerve bypass technique.
