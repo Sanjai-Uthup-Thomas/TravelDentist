@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import logo from '../../../public/TravelDentist_logo.png';
+// import logo from '../../../public/TravelDentist_logo.png';
+import logo from '../../../public/TravelDentist_logosvg.svg';
+
 
 const Footer = () => {
   return (
@@ -55,8 +57,8 @@ const Footer = () => {
               <li><Link href="/dental-implants" className="hover:text-[#F875AA] transition">Dental Implants</Link></li>
               <li><Link href="/full-mouth-rehabilitation" className="hover:text-[#F875AA] transition">Full mouth rehabilitation</Link></li>
               <li><Link href="/laser-dentistry" className="hover:text-[#F875AA] transition">Laser Dentistry</Link></li>
+              <li><Link href="/gummy-smile-correction" className="hover:text-[#F875AA] transition">Gummy Smile Correction</Link></li>
               <li><Link href="/dental-tourism" className="hover:text-[#F875AA] transition">Dental Tourism</Link></li>
-
             </ul>
           </div>
 

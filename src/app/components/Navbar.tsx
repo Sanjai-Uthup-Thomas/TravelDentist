@@ -1,44 +1,90 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
-import Link from 'next/link';
-import { Menu, X, ChevronDown, ChevronUp } from 'lucide-react';
-import Image from 'next/image';
-import { motion, AnimatePresence } from 'framer-motion';
-import logo from '../../../public/TravelDentist_logo.png';
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import { Menu, X, ChevronDown, ChevronUp } from "lucide-react";
+import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
+import logo from "../../../public/TravelDentist_logosvg.svg";
+// import Travel_Dentist from "../../../public/Travel_Dentist.svg";
+import T from "../../../public/T.svg";
+
+// import logo from '../../../public/TravelDentist_logo.png';
 
 export default function Navbar() {
   const [modalOpen, setModalOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const toggleModal = () => setModalOpen(!modalOpen);
   const toggleServices = () => setServicesOpen(!servicesOpen);
 
   useEffect(() => {
     if (modalOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = "auto";
     }
     return () => {
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = "auto";
     };
   }, [modalOpen]);
+  // Scroll logic to detect when user moves down the page
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
 
   return (
-    <nav className="w-full fixed top-0 left-0 z-50 backdrop-blur-md bg-pink-50/70 shadow-lg h-30 md:h-55">
-      <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-25 md:h-50 relative">
+<nav 
+      className={`w-full fixed top-0 left-0 z-50 backdrop-blur-md bg-pink-50/70 shadow-lg transition-all duration-300 ease-in-out ${
+        scrolled ? 'h-30 md:h-45' : 'h-30 md:h-85'
+      }`}
+    >
+      <div 
+        className={`max-w-7xl mx-auto px-4 flex items-center justify-between relative transition-all duration-300 ease-in-out ${
+          scrolled ? 'h-25 md:h-45' : 'h-25 md:h-85'
+        }`}
+      >
         {/* Logo */}
-        <div className="flex-shrink-0 mt-5">
+        <div className="flex-shrink-0 mt-5 flex">
           <Link href="/">
             <Image
               src={logo}
               alt="Logo"
               width={210}
               height={210}
-              className="object-contain w-[120px] md:w-[210px] hover:scale-105 transition-transform duration-300"
+              className={`object-contain  hover:scale-105 transition-transform duration-300 ${
+          scrolled ? 'w-[120px] md:w-[150px]' : 'w-[120px] md:w-[210px]'
+        }`}
             />
           </Link>
+          {/* <Image
+            src={Travel_Dentist} // Using the imported variable
+            alt="Secondary Logo"
+            width={210} // Adjust width as needed
+            height={210} // Adjust height as needed
+            className="object-contain hover:scale-105 transition-transform duration-300"
+          /> */}
+
         </div>
+                  <Image
+            src={T} // Using the imported variable
+            alt="Secondary Logo"
+            width={270} // Adjust width as needed
+            height={150} // Adjust height as needed
+            className={`object-contain transition-transform duration-300 ${
+              scrolled ? 'mt-8 pb-3 w-36 md:w-xl md:p-30 md:mr-20 md:mb-15' : 'mt-8 pb-3 w-36 md:w-2xl md:p-10 md:mr-15 md:mb-15'
+            }`}
+          />
 
         {/* Center link */}
         <div className="hidden md:flex absolute left-1/2 bottom-0 transform -translate-x-1/2 mb-3">
@@ -62,7 +108,10 @@ export default function Navbar() {
 
         {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center">
-          <button onClick={toggleModal} className="text-[#F875AA] focus:outline-none">
+          <button
+            onClick={toggleModal}
+            className="text-[#F875AA] focus:outline-none"
+          >
             <Menu size={40} />
           </button>
         </div>
@@ -76,7 +125,7 @@ export default function Navbar() {
             <motion.div
               className="fixed inset-0 bg-black bg-opacity-10 z-40 h-800"
               initial={{ opacity: 0 }}
-              animate={{ opacity: .5 }}
+              animate={{ opacity: 0.5 }}
               exit={{ opacity: 0 }}
               onClick={toggleModal}
             />
@@ -84,13 +133,16 @@ export default function Navbar() {
             {/* Side Modal */}
             <motion.div
               className="fixed top-0 left-0 w-3/4 max-w-xs h-800 bg-white shadow-lg z-50 p-4 flex flex-col space-y-2"
-              initial={{ x: '-100%' }}
+              initial={{ x: "-100%" }}
               animate={{ x: 0 }}
-              exit={{ x: '-100%' }}
-              transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+              exit={{ x: "-100%" }}
+              transition={{ type: "spring", stiffness: 300, damping: 30 }}
             >
               <div className="flex justify-end mb-4">
-                <button onClick={toggleModal} className="text-[#F875AA] hover:text-pink-600 transition-colors">
+                <button
+                  onClick={toggleModal}
+                  className="text-[#F875AA] hover:text-pink-600 transition-colors"
+                >
                   <X size={30} />
                 </button>
               </div>
@@ -121,7 +173,7 @@ export default function Navbar() {
                   {servicesOpen && (
                     <motion.div
                       initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: 'auto', opacity: 1 }}
+                      animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
                       className="pl-4 mt-2 flex flex-col space-y-1 overflow-hidden"
                     >
@@ -153,19 +205,20 @@ export default function Navbar() {
                         className="py-2 px-3 text-md text-gray-600 hover:bg-pink-50 hover:text-[#F875AA] rounded-md transition-all duration-200"
                       >
                         Laser Dentistry
-                      </Link>                      <Link
-                        href="/dental-tourism"
-                        onClick={toggleModal}
-                        className="py-2 px-3 text-md text-gray-600 hover:bg-pink-50 hover:text-[#F875AA] rounded-md transition-all duration-200"
-                      >
-                        Dental Tourism
-                      </Link>
-                       <Link
+                      </Link>{" "}
+                      <Link
                         href="/gummy-smile-correction"
                         onClick={toggleModal}
                         className="py-2 px-3 text-md text-gray-600 hover:bg-pink-50 hover:text-[#F875AA] rounded-md transition-all duration-200"
                       >
                         Gummy smile correction
+                      </Link>
+                      <Link
+                        href="/dental-tourism"
+                        onClick={toggleModal}
+                        className="py-2 px-3 text-md text-gray-600 hover:bg-pink-50 hover:text-[#F875AA] rounded-md transition-all duration-200"
+                      >
+                        Dental Tourism
                       </Link>
                     </motion.div>
                   )}

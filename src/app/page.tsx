@@ -10,6 +10,7 @@ import TechnologyIcon from '../../public/Technology.svg';
 import Image1 from '../../public/Image.jpg';
 import GUM_DISEASE_TREATMENT from '../../public/GUM-DISEASE-TREATMENT.jpg';
 import dentalImplants from '../../public/dentalImplants.webp';
+import GummySmileCorrection from "../../public/gummy-smile-correction.webp";
 import keralaTourism from '../../public/keralaTourism.png';
 import Laser from '../../public/laser.png';
 import FMR from '../../public/FMR.webp';
@@ -63,6 +64,16 @@ export default function Home() {
       alt: "Laser dentistry",
     },
     {
+      imageSrc: GummySmileCorrection,
+      title: "GUMMY SMILE CORRECTION",
+      description: [
+        "Gummy smile correction is a cosmetic dental procedure that improves smiles by reducing visible gum tissue.",
+      ],
+      link: "/gummy-smile-correction",
+      alt: "Gummy Smile Correction",
+    },
+
+    {
       imageSrc: keralaTourism,
       title: "DENTAL TOURISM",
       description: [
@@ -87,7 +98,7 @@ export default function Home() {
           transition={{ duration: 0.6 }}
           className="h-60 bg-white flex items-center justify-center"
         >
-          <h1 className="text-[#F875AA] text-2xl font-bold text-center">
+          <h1 className="text-[#f875aa] text-2xl font-bold text-center">
             THE TRAVEL DENTIST DIFFERENCE
           </h1>
         </motion.div>

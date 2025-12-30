@@ -14,7 +14,7 @@ const Card = ({ index, imageSrc, title, description, link, alt }: CardProps) => 
     const isEvenIndex = index % 2 === 0;
 
     return (
-        <div className="flex flex-col md:flex-row items-center justify-center gap-6 p-4">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6 p-4 mb-10">
             {/* Left Box (Image) */}
             <motion.div
                 className={`w-full md:w-[400px] h-[300px] bg-pink-200 rounded-xl shadow-lg flex items-center justify-center overflow-hidden ${isEvenIndex ? "md:order-1" : "md:order-2"}`}
@@ -41,17 +41,20 @@ const Card = ({ index, imageSrc, title, description, link, alt }: CardProps) => 
                 viewport={{ once: true }}
                 transition={{ duration: 1 }}
             >
-                <motion.h2
-                    className="text-2xl font-bold text-[#F875AA] mb-4"
-                    initial={{ opacity: 0, y: -30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                >
-                    {title}
-                </motion.h2>
+               {/* Title */}
+      <motion.h2
+        className="text-3xl md:text-4xl font-bold text-[#F875AA]"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        {title}
+      </motion.h2>
 
-                <motion.div
+      {/* Accent Line */}
+      <div className="w-20 h-1 bg-gradient-to-r from-[#F875AA] to-pink-400 rounded-full my-5" />
+
+                {/* <motion.div
                     className="flex-1 space-y-2"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
@@ -63,7 +66,20 @@ const Card = ({ index, imageSrc, title, description, link, alt }: CardProps) => 
                             {text}
                         </p>
                     ))}
-                </motion.div>
+                </motion.div> */}
+                <motion.div
+  className="flex-1 space-y-4"
+  initial={{ opacity: 0, y: 10 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.8, ease: "easeOut" }}
+>
+  {description.map((text: string, idx: number) => (
+<p key={idx} className="text-lg font-semibold text-[#F875AA]">
+                            {text}
+                        </p>
+  ))}
+</motion.div>
 
                 <motion.div
                     className="flex flex-1 justify-center items-center"
