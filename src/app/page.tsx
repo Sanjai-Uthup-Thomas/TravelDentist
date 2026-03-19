@@ -197,7 +197,7 @@ export default function Home() {
           />
         ))}
       </>
-      <div>
+      {/* <div>
         <div className="h-[200px] flex items-center justify-center bg-white">
           <h1 className="text-4xl md:text-5xl font-bold text-[#F875AA] tracking-wide">
             TESTIMONIALS
@@ -205,7 +205,6 @@ export default function Home() {
         </div>
 
         <div className="flex flex-wrap gap-6 justify-center">
-          {/* Box 1 */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -219,7 +218,6 @@ export default function Home() {
             <p className="mt-4 text-sm text-gray-500">— Aisha Mathew</p>
           </motion.div>
 
-          {/* Box 2 */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -233,7 +231,6 @@ export default function Home() {
             <p className="mt-4 text-sm text-gray-500">— Rahul Nair</p>
           </motion.div>
 
-          {/* Box 3 */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -248,7 +245,7 @@ export default function Home() {
           </motion.div>
         </div>
 
-      </div>
+      </div> */}
       <Footer />
       {/* WhatsApp Floating Button */}
       <a

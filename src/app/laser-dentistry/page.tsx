@@ -13,7 +13,7 @@ export default function LaserDentistryPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="max-w-5xl mx-auto px-4 py-10"
+                className="max-w-5xl mx-auto px-4 py-10 md:pt-40"
             >
                 {/* Heading */}
                 <h1 className="text-4xl md:text-5xl font-extrabold text-center text-[#F875AA] mb-10 leading-tight">

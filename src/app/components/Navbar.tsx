@@ -79,15 +79,15 @@ export default function Navbar() {
                   <Image
             src={T} // Using the imported variable
             alt="Secondary Logo"
-            width={270} // Adjust width as needed
-            height={150} // Adjust height as needed
+            width={100} // Adjust width as needed
+            height={50} // Adjust height as needed
             className={`object-contain transition-transform duration-300 ${
-              scrolled ? 'mt-8 pb-3 w-36 md:w-xl md:p-30 md:mr-20 md:mb-15' : 'mt-8 pb-3 w-36 md:w-2xl md:p-10 md:mr-15 md:mb-15'
+              scrolled ? 'mt-8 pb-3 w-30 md:w-100 lg:w-3/12 md:p-27 md:mr-30 md:ml-30 md:mb-10 lg:p-15 lg:mr-60 lg:mb-10' : 'mt-8 pb-3 w-30 md:w-120 md:p-25 md:mr-40 md:mb-25'
             }`}
           />
 
         {/* Center link */}
-        <div className="hidden md:flex absolute left-1/2 bottom-0 transform -translate-x-1/2 mb-3">
+        <div className={`hidden md:flex absolute left-1/2 bottom-0 transform -translate-x-1/2 mb-3 ${scrolled ?'md:right-40 lg:right-120':''}`}>
           <button
             onClick={toggleModal}
             className="text-[#F875AA] font-bold text-2xl bg-white border-2 border-pink-300 rounded-full px-6 py-2 shadow-lg hover:bg-pink-100 hover:text-[#F875AA] hover:scale-105 transition-all duration-300"
@@ -97,7 +97,7 @@ export default function Navbar() {
         </div>
 
         {/* Right link */}
-        <div className="hidden md:flex absolute right-0 bottom-0 transform -translate-x-1/2 mb-3">
+        <div className={`hidden md:flex absolute right-0 bottom-0 transform -translate-x-1/2 mb-3 ${scrolled ?'md:-right-25 lg:right-0':''}`}>
           <Link
             href="/contact-us"
             className="text-[#F875AA] font-bold text-2xl bg-white border-2 border-pink-300 rounded-full px-6 py-2 shadow-lg hover:bg-pink-100 hover:text-[#F875AA] hover:scale-105 transition-all duration-300"

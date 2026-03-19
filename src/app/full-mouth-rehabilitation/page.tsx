@@ -15,7 +15,7 @@ export default function FullMouthRehabilitationPage() {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="max-w-5xl mx-auto px-4 py-10"
+        className="max-w-5xl mx-auto px-4 py-10 md:pt-40"
       >
         <h1 className="text-4xl md:text-5xl font-bold text-center text-[#F875AA] mb-10">
           Full Mouth Rehabilitation

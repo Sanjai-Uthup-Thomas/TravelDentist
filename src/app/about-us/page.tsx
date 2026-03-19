@@ -19,7 +19,7 @@ export default function AboutUs() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="h-[200px] flex items-center justify-center"
+        className="h-[200px] flex items-center justify-center py-10 md:pt-55"
       >
         <h1 className="text-4xl md:text-5xl font-bold text-[#F875AA] tracking-wide">
           ABOUT US

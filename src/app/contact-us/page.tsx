@@ -73,7 +73,7 @@ export default function ContactUs() {
       <div className="h-30 md:h-70" />
 
       {/* Header */}
-      <div className="text-center mb-10">
+      <div className="text-center mb-10 py-10 md:pt-20">
         <h1 className="text-4xl md:text-5xl font-extrabold text-[#F875AA]">CONTACT US</h1>
       </div>
 
