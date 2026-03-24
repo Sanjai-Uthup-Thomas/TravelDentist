@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://traveldentist.in
+
+# Sitemaps
+Sitemap: https://traveldentist.in/sitemap.xml
