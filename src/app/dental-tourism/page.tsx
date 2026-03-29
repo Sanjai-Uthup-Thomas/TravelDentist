@@ -9,7 +9,6 @@ import Kumarkom from "../../../public/Kumarkom.jpg";
 import kattappana from "../../../public/kattappana.jpg";
 import thekkady from "../../../public/thekkady-munnar.jpg";
 import vagamon from "../../../public/vagamon-1.jpg";
-import WhatsAppButton from "../components/Whatsapp";
 
 export default function DentalTourism() {
   return (

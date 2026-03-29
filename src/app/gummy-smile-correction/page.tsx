@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 import { motion } from "framer-motion";
 import GummySmileCorrection from "../../../public/gummy-smile-correction.webp";
 import GummySmileBeforeAfter from "../../../public/gummy-smile-makeover-before-and-after-980x551.webp";
-import WhatsAppButton from "../components/Whatsapp";
+
 
 export default function GumDiseaseTreatment() {
   return (

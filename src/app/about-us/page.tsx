@@ -6,7 +6,6 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import RahulImage from "../../../public/Rahul_Image.png";
 import RohitImage from "../../../public/Rohit_Image.png";
-import WhatsAppButton from "../components/Whatsapp";
 export default function AboutUs() {
   return (
     <div className="relative min-h-screen bg-white">

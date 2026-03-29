@@ -4,7 +4,6 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { motion } from "framer-motion";
-import WhatsAppButton from "../components/Whatsapp";
 export default function GumDiseaseTreatment() {
   return (
     <div className="relative min-h-screen bg-gradient-to-b from-[#ffffff] to-white text-gray-900">

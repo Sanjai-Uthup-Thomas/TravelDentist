@@ -16,7 +16,6 @@ import Laser from "../../public/laser.png";
 import FMR from "../../public/FMR.webp";
 import Footer from "./components/Footer";
 import Card from "./components/Card";
-import WhatsAppButton from "./components/Whatsapp";
 
 export default function Home() {
   const sections = [

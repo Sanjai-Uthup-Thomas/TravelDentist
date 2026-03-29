@@ -12,7 +12,6 @@ import toast, { Toaster } from "react-hot-toast";
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 import loaderAnimation from "../../../public/loader.json";
 import dynamic from "next/dynamic";
-import WhatsAppButton from "../components/Whatsapp";
 
 const contactSchema = z.object({
   name: z.string().min(1, "Name is required"),

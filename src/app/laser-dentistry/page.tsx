@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import WhatsAppButton from "../components/Whatsapp";
+
 export default function LaserDentistryPage() {
   return (
     <div className="relative min-h-screen bg-gradient-to-b from-[#fff0f5] to-white text-gray-900 overflow-hidden">
