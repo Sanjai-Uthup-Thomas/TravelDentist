@@ -38,20 +38,19 @@ export default function Navbar() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-
   return (
-<nav 
+    <nav
       className={`w-full fixed top-0 left-0 z-50 backdrop-blur-md bg-pink-50/70 shadow-lg transition-all duration-300 ease-in-out ${
-        scrolled ? 'h-30 md:h-45' : 'h-30 md:h-85'
+        scrolled ? "h-30 md:h-45" : "h-30 md:h-85"
       }`}
     >
-      <div 
+      <div
         className={`max-w-7xl mx-auto px-4 flex items-center justify-between relative transition-all duration-300 ease-in-out ${
-          scrolled ? 'h-25 md:h-45' : 'h-25 md:h-85'
+          scrolled ? "h-25 md:h-45" : "h-25 md:h-85"
         }`}
       >
         {/* Logo */}
@@ -63,8 +62,8 @@ export default function Navbar() {
               width={210}
               height={210}
               className={`object-contain  hover:scale-105 transition-transform duration-300 ${
-          scrolled ? 'w-[120px] md:w-[150px]' : 'w-[120px] md:w-[210px]'
-        }`}
+                scrolled ? "w-[120px] md:w-[150px]" : "w-[120px] md:w-[210px]"
+              }`}
             />
           </Link>
           {/* <Image
@@ -74,20 +73,23 @@ export default function Navbar() {
             height={210} // Adjust height as needed
             className="object-contain hover:scale-105 transition-transform duration-300"
           /> */}
-
         </div>
-                  <Image
-            src={T} // Using the imported variable
-            alt="Secondary Logo"
-            width={100} // Adjust width as needed
-            height={50} // Adjust height as needed
-            className={`object-contain transition-transform duration-300 ${
-              scrolled ? 'mt-8 pb-3 w-30 md:w-100 lg:w-3/12 md:p-27 md:mr-30 md:ml-30 md:mb-10 lg:p-15 lg:mr-60 lg:mb-10' : 'mt-8 pb-3 w-30 md:w-120 md:p-25 md:mr-40 md:mb-25'
-            }`}
-          />
+        <Image
+          src={T} // Using the imported variable
+          alt="Secondary Logo"
+          width={100} // Adjust width as needed
+          height={50} // Adjust height as needed
+          className={`object-contain transition-transform duration-300 ${
+            scrolled
+              ? "mt-8 pb-3 w-30 md:w-100 lg:w-3/12 md:p-27 md:mr-30 md:ml-30 md:mb-10 lg:p-15 lg:mr-60 lg:mb-10"
+              : "mt-8 pb-3 w-30 md:w-120 md:p-25 md:mr-40 md:mb-25"
+          }`}
+        />
 
         {/* Center link */}
-        <div className={`hidden md:flex absolute left-1/2 bottom-0 transform -translate-x-1/2 mb-3 ${scrolled ?'md:right-40 lg:right-120':''}`}>
+        <div
+          className={`hidden md:flex absolute left-1/2 bottom-0 transform -translate-x-1/2 mb-3 ${scrolled ? "md:right-40 lg:right-120" : ""}`}
+        >
           <button
             onClick={toggleModal}
             className="text-[#F875AA] font-bold text-2xl bg-white border-2 border-pink-300 rounded-full px-6 py-2 shadow-lg hover:bg-pink-100 hover:text-[#F875AA] hover:scale-105 transition-all duration-300"
@@ -97,7 +99,9 @@ export default function Navbar() {
         </div>
 
         {/* Right link */}
-        <div className={`hidden md:flex absolute right-0 bottom-0 transform -translate-x-1/2 mb-3 ${scrolled ?'md:-right-25 lg:right-0':''}`}>
+        <div
+          className={`hidden md:flex absolute right-0 bottom-0 transform -translate-x-1/2 mb-3 ${scrolled ? "md:-right-25 lg:right-0" : ""}`}
+        >
           <Link
             href="/contact-us"
             className="text-[#F875AA] font-bold text-2xl bg-white border-2 border-pink-300 rounded-full px-6 py-2 shadow-lg hover:bg-pink-100 hover:text-[#F875AA] hover:scale-105 transition-all duration-300"

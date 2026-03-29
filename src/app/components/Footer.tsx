@@ -1,8 +1,8 @@
-import Link from 'next/link';
-import Image from 'next/image';
+import Link from "next/link";
+import Image from "next/image";
 // import logo from '../../../public/TravelDentist_logo.png';
-import logo from '../../../public/TravelDentist_logosvg.svg';
-
+import logo from "../../../public/TravelDentist_logosvg.svg";
+import WhatsAppButton from "./Whatsapp";
 
 const Footer = () => {
   return (
@@ -10,7 +10,6 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-8">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-
           {/* Clinic Info */}
           <div className="space-y-4">
             <Link href="/">
@@ -40,25 +39,89 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="space-y-2">
-            <h4 className="text-lg font-semibold text-[#F875AA]">Quick Links</h4>
+            <h4 className="text-lg font-semibold text-[#F875AA]">
+              Quick Links
+            </h4>
             <ul className="space-y-2">
-              <li><Link href="/" className="hover:text-[#F875AA] transition">Home</Link></li>
-              <li><Link href="/about-us" className="hover:text-[#F875AA] transition">About Us</Link></li>
+              <li>
+                <Link href="/" className="hover:text-[#F875AA] transition">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/about-us"
+                  className="hover:text-[#F875AA] transition"
+                >
+                  About Us
+                </Link>
+              </li>
               {/* <li><Link href="/services" className="hover:text-[#F875AA] transition">Services</Link></li> */}
-              <li><Link href="/contact-us" className="hover:text-[#F875AA] transition">Contact</Link></li>
+              <li>
+                <Link
+                  href="/contact-us"
+                  className="hover:text-[#F875AA] transition"
+                >
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
 
           {/* Services */}
           <div className="space-y-2">
-            <h4 className="text-lg font-semibold text-pink-600">Our Services</h4>
+            <h4 className="text-lg font-semibold text-pink-600">
+              Our Services
+            </h4>
             <ul className="space-y-2">
-              <li><Link href="/gum-disease-treatment" className="hover:text-[#F875AA] transition">Gum Disease Treatment</Link></li>
-              <li><Link href="/dental-implants" className="hover:text-[#F875AA] transition">Dental Implants</Link></li>
-              <li><Link href="/full-mouth-rehabilitation" className="hover:text-[#F875AA] transition">Full mouth rehabilitation</Link></li>
-              <li><Link href="/laser-dentistry" className="hover:text-[#F875AA] transition">Laser Dentistry</Link></li>
-              <li><Link href="/gummy-smile-correction" className="hover:text-[#F875AA] transition">Gummy Smile Correction</Link></li>
-              <li><Link href="/dental-tourism" className="hover:text-[#F875AA] transition">Dental Tourism</Link></li>
+              <li>
+                <Link
+                  href="/gum-disease-treatment"
+                  className="hover:text-[#F875AA] transition"
+                >
+                  Gum Disease Treatment
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/dental-implants"
+                  className="hover:text-[#F875AA] transition"
+                >
+                  Dental Implants
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/full-mouth-rehabilitation"
+                  className="hover:text-[#F875AA] transition"
+                >
+                  Full mouth rehabilitation
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/laser-dentistry"
+                  className="hover:text-[#F875AA] transition"
+                >
+                  Laser Dentistry
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/gummy-smile-correction"
+                  className="hover:text-[#F875AA] transition"
+                >
+                  Gummy Smile Correction
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/dental-tourism"
+                  className="hover:text-[#F875AA] transition"
+                >
+                  Dental Tourism
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -66,7 +129,9 @@ const Footer = () => {
           <div className="space-y-6">
             {/* Clinic Locations in two columns */}
             <div>
-              <h4 className="text-lg font-semibold text-pink-600 mb-4">Our Locations</h4>
+              <h4 className="text-lg font-semibold text-pink-600 mb-4">
+                Our Locations
+              </h4>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-gray-700">
                 {/* Location 1 */}
                 <div>
@@ -86,8 +151,13 @@ const Footer = () => {
 
             {/* Shared Contact Details */}
             <div className="space-y-2 text-sm text-gray-700">
-              <p><span className="font-medium">Phone:</span> +91-9035153096</p>
-              <p><span className="font-medium">Email:</span> traveldentist.in@gmail.com</p>
+              <p>
+                <span className="font-medium">Phone:</span> +91-9035153096
+              </p>
+              <p>
+                <span className="font-medium">Email:</span>{" "}
+                traveldentist.in@gmail.com
+              </p>
             </div>
 
             {/* Button */}
@@ -98,19 +168,30 @@ const Footer = () => {
               Book Appointment
             </Link>
           </div>
-
-
         </div>
 
         {/* Copyright */}
         <div className="border-t border-pink-200 mt-8 pt-6 text-center text-sm text-pink-600">
-          <p>© {new Date().getFullYear()} Travel Dentist. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()} Travel Dentist. All rights reserved.
+          </p>
           <div className="mt-2 flex justify-center space-x-4">
-            <Link href="/privacy-policy" className="hover:text-[#F875AA] transition">Privacy Policy</Link>
-            <Link href="/terms-service" className="hover:text-[#F875AA] transition">Terms of Service</Link>
+            <Link
+              href="/privacy-policy"
+              className="hover:text-[#F875AA] transition"
+            >
+              Privacy Policy
+            </Link>
+            <Link
+              href="/terms-service"
+              className="hover:text-[#F875AA] transition"
+            >
+              Terms of Service
+            </Link>
           </div>
         </div>
       </div>
+      <WhatsAppButton />
     </footer>
   );
 };
