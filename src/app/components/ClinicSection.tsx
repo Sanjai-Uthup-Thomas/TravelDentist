@@ -51,8 +51,8 @@ export default function ClinicSection() {
 
       {/* HEADER */}
       <div className="relative text-center mb-14 px-6">
-        <h2 className="text-3xl md:text-5xl font-bold text-[#F875AA]">
-          Visit Our Clinics
+        <h2 className="text-4xl md:text-6xl font-bold text-gray-600">
+          Visit <span className="text-[#F875AA]">Our Clinics</span>
         </h2>
         <p className="text-gray-500 mt-3 max-w-xl mx-auto">
           Experience premium dental care at our multiple locations across
@@ -142,27 +142,25 @@ export default function ClinicSection() {
 
         {/* RIGHT: MAP */}
 
-      <div className="hidden md:block md:sticky md:top-45 h-[500px] rounded-2xl shadow-2xl border border-pink-100 bg-white overflow-hidden">
-
-  <AnimatePresence mode="wait">
-    <motion.div
-      key={active}
-      initial={{ opacity: 0, scale: 0.97 }}
-      animate={{ opacity: 1, scale: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.4 }}
-      className="w-full h-full"
-    >
-      <iframe
-        src={clinics[active].map}
-        className="w-full h-full"
-        style={{ border: 0 }}
-        loading="lazy"
-      />
-    </motion.div>
-  </AnimatePresence>
-
-</div>
+        <div className="block md:sticky md:top-45 h-[500px] rounded-2xl shadow-amber-50 border border-pink-100 bg-white overflow-hidden">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={active}
+              initial={{ opacity: 0, scale: 0.97 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.4 }}
+              className="w-full h-full"
+            >
+              <iframe
+                src={clinics[active].map}
+                className="w-full h-full"
+                style={{ border: 0 }}
+                loading="lazy"
+              />
+            </motion.div>
+          </AnimatePresence>
+        </div>
       </div>
 
       {/* CTA */}

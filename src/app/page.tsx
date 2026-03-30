@@ -12,6 +12,7 @@ import Card from "./components/Card";
 import ClinicSection from "./components/ClinicSection";
 import CinematicSection from "./components/CinematicSection";
 import DifferenceSection from "./components/DifferenceSection";
+import FAQSection from "./components/FAQSection";
 
 export default function Home() {
   const sections = [
@@ -84,11 +85,6 @@ export default function Home() {
       <DifferenceSection />
       {/* about */}
       <CinematicSection />
-      {/* <div className="h-[200px] flex items-center justify-center bg-white">
-        <h1 className="text-4xl md:text-5xl font-bold text-[#F875AA] tracking-wide">
-          SERVICES
-        </h1>
-      </div> */}
       <div className="relative py-20 flex items-center justify-center overflow-hidden">
         {/* BACKGROUND GRADIENT */}
         <div className="absolute inset-0 bg-gradient-to-b from-pink-50 via-white to-pink-50" />
@@ -132,56 +128,8 @@ export default function Home() {
           />
         ))}
       </div>
-      {/* <div>
-        <div className="h-[200px] flex items-center justify-center bg-white">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#F875AA] tracking-wide">
-            TESTIMONIALS
-          </h1>
-        </div>
-
-        <div className="flex flex-wrap gap-6 justify-center">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="flex flex-col items-center bg-white shadow-lg rounded-xl p-6 max-w-sm"
-          >
-            <p className="text-center text-pink-600 hover:text-[#F875AA] transition">
-              Amazing service! The doctors and staff were very friendly and professional.
-            </p>
-            <p className="mt-4 text-sm text-gray-500">— Aisha Mathew</p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="flex flex-col items-center bg-white shadow-lg rounded-xl p-6 max-w-sm"
-          >
-            <p className="text-center text-pink-600 hover:text-[#F875AA] transition">
-              Painless experience and great care. Highly recommend this dental clinic!
-            </p>
-            <p className="mt-4 text-sm text-gray-500">— Rahul Nair</p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="flex flex-col items-center bg-white shadow-lg rounded-xl p-6 max-w-sm"
-          >
-            <p className="text-center text-pink-600 hover:text-[#F875AA] transition">
-              State-of-the-art technology and warm hospitality. Truly the best!
-            </p>
-            <p className="mt-4 text-sm text-gray-500">— Sneha George</p>
-          </motion.div>
-        </div>
-
-      </div> */}
       <ClinicSection />
+      <FAQSection />
       <Footer />
     </div>
   );

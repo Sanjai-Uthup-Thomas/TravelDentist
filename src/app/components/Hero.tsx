@@ -133,7 +133,7 @@ export default function Hero() {
 
             <span className="relative z-10 flex items-center gap-3 justify-center w-full">
               <Calendar size={22} />
-              Get Free Consultation
+              Get Consultation
             </span>
           </Link>
         </div>

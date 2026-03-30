@@ -103,7 +103,7 @@ export default function CinematicSection() {
               href="/contact-us"
               className="px-8 py-3 rounded-full bg-gradient-to-r from-pink-500 to-pink-600 text-white font-semibold shadow-xl hover:scale-105 transition"
             >
-              Get Free Consultation
+              Get Consultation
             </a>
 
             <a
