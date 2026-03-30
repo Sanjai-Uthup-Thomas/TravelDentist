@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-screen md:h-280 flex items-center overflow-hidden pt-20 md:pt-70">
+    <section className="relative w-full min-h-screen md:h-150 flex items-center overflow-hidden pt-40">
       {/* Background */}
       <div className="absolute inset-0">
         <Image
@@ -56,7 +56,7 @@ export default function Hero() {
           </p>
 
           {/* 💰 PRICE COMPARISON */}
-          <div className="bg-white/10 backdrop-blur-lg border border-white/10 rounded-xl p-5 flex flex-col sm:flex-row justify-between items-center gap-4">
+          {/* <div className="bg-white/10 backdrop-blur-lg border border-white/10 rounded-xl p-5 flex flex-col sm:flex-row justify-between items-center gap-4">
             <div className="text-center">
               <p className="text-gray-400 text-sm">
                 Typical International Cost
@@ -74,12 +74,12 @@ export default function Hero() {
                 $400
               </p>
             </div>
-          </div>
+          </div> */}
 
           {/* 💰 SAVINGS BADGE */}
-          <div className="inline-flex items-center gap-2 bg-pink-500/10 border border-pink-500/20 text-pink-400 px-4 py-2 rounded-full text-sm font-medium shadow-md">
+          {/* <div className="inline-flex items-center gap-2 bg-pink-500/10 border border-pink-500/20 text-pink-400 px-4 py-2 rounded-full text-sm font-medium shadow-md">
             💰 Save up to $2600 on your treatment
-          </div>
+          </div> */}
 
           {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
             <div className="flex items-center gap-3 bg-white/5 border border-white/10 backdrop-blur-md rounded-lg px-4 py-3 hover:bg-white/10 transition">

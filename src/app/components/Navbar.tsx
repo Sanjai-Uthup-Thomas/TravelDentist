@@ -6,10 +6,7 @@ import { Menu, X, ChevronDown, ChevronUp } from "lucide-react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "../../../public/TravelDentist_logosvg.svg";
-// import Travel_Dentist from "../../../public/Travel_Dentist.svg";
 import T from "../../../public/T.svg";
-
-// import logo from '../../../public/TravelDentist_logo.png';
 
 export default function Navbar() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -42,86 +39,87 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 40);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <nav
-      className={`w-full fixed top-0 left-0 z-50 backdrop-blur-md bg-pink-50/70 shadow-lg transition-all duration-300 ease-in-out ${
-        scrolled ? "h-30 md:h-45" : "h-30 md:h-85"
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500
+      ${
+        scrolled
+          ? "w-full fixed top-0 left-0 z-50 backdrop-blur-md bg-pink-50/70 shadow-lg transition-all duration-300 ease-in-out"
+          : "bg-pink-50/70 backdrop-blur-md py-4"
       }`}
     >
-      <div
-        className={`max-w-7xl mx-auto px-4 flex items-center justify-between relative transition-all duration-300 ease-in-out ${
-          scrolled ? "h-25 md:h-45" : "h-25 md:h-85"
-        }`}
-      >
-        {/* Logo */}
-        <div className="flex-shrink-0 mt-5 flex">
-          <Link href="/">
-            <Image
-              src={logo}
-              alt="Logo"
-              width={210}
-              height={210}
-              className={`object-contain  hover:scale-105 transition-transform duration-300 ${
-                scrolled ? "w-[120px] md:w-[150px]" : "w-[120px] md:w-[210px]"
-              }`}
-            />
-          </Link>
-          {/* <Image
-            src={Travel_Dentist} // Using the imported variable
-            alt="Secondary Logo"
-            width={210} // Adjust width as needed
-            height={210} // Adjust height as needed
-            className="object-contain hover:scale-105 transition-transform duration-300"
-          /> */}
-        </div>
-        <Image
-          src={T} // Using the imported variable
-          alt="Secondary Logo"
-          width={100} // Adjust width as needed
-          height={50} // Adjust height as needed
-          className={`object-contain transition-transform duration-300 ${
-            scrolled
-              ? "mt-8 pb-3 w-30 md:w-100 lg:w-3/12 md:p-27 md:mr-30 md:ml-30 md:mb-10 lg:p-15 lg:mr-60 lg:mb-10"
-              : "mt-8 pb-3 w-30 md:w-120 md:p-25 md:mr-40 md:mb-25"
-          }`}
-        />
+      <div className="max-w-7xl mx-auto md:px-2 flex items-center justify-between relative ">
+        {/* LEFT LOGO */}
+        <Link href="/" className="flex items-center z-10">
+          <Image
+            src={logo}
+            alt="Logo"
+            width={scrolled ? 100 : 120}
+            className="transition-all duration-500 hover:scale-105 md:w-[150px]"
+          />
+        </Link>
 
-        {/* Center link */}
-        <div
-          className={`hidden md:flex absolute left-1/2 bottom-0 transform -translate-x-1/2 mb-3 ${scrolled ? "md:right-40 lg:right-120" : ""}`}
+        {/* CENTER LOGO */}
+        <motion.div
+          animate={{
+            scale: scrolled ? 0.8 : 1,
+          }}
+          transition={{ duration: 0.3 }}
+          className="absolute left-1/2 -translate-x-1/2 top-0 md:top-0"
         >
+          <Image
+            src={T}
+            alt="Center Logo"
+            width={110} // 👈 smaller for mobile
+            className="md:w-[160px]"
+          />
+        </motion.div>
+
+        {/* RIGHT BUTTONS */}
+        <div className="hidden md:flex items-center gap-4">
+          {/* MENU */}
+          {/* MENU BUTTON */}
           <button
-            onClick={toggleModal}
-            className="text-[#F875AA] font-bold text-2xl bg-white border-2 border-pink-300 rounded-full px-6 py-2 shadow-lg hover:bg-pink-100 hover:text-[#F875AA] hover:scale-105 transition-all duration-300"
+            onClick={() => setModalOpen(true)}
+            className="relative px-7 py-3 md:px-8 md:py-3.5 
+  rounded-full text-[#F875AA] 
+  border-2 border-pink-300 
+  text-base md:text-lg font-semibold
+  overflow-hidden group transition-all duration-300 hover:scale-105"
           >
-            Menu
+            {/* <span className="absolute inset-0 bg-pink-50/70 opacity-0 group-hover:opacity-100 transition" /> */}
+            <span className="relative z-10">Menu</span>
           </button>
-        </div>
 
-        {/* Right link */}
-        <div
-          className={`hidden md:flex absolute right-0 bottom-0 transform -translate-x-1/2 mb-3 ${scrolled ? "md:-right-25 lg:right-0" : ""}`}
-        >
+          {/* BOOK BUTTON */}
           <Link
             href="/contact-us"
-            className="text-[#F875AA] font-bold text-2xl bg-white border-2 border-pink-300 rounded-full px-6 py-2 shadow-lg hover:bg-pink-100 hover:text-[#F875AA] hover:scale-105 transition-all duration-300"
+            className="relative px-8 py-3 md:px-10 md:py-3.5 
+  rounded-full text-white font-semibold 
+  text-base md:text-lg
+  overflow-hidden group shadow-lg transition-all duration-300 hover:scale-105"
           >
-            Book Online
+            <span className="absolute inset-0 bg-gradient-to-r from-pink-500 to-pink-600 group-hover:scale-110 transition duration-300" />
+            <span className="relative z-10">Book Online</span>
           </Link>
         </div>
 
-        {/* Mobile Menu Button */}
-        <div className="md:hidden flex items-center">
-          <button
-            onClick={toggleModal}
-            className="text-[#F875AA] focus:outline-none"
-          >
-            <Menu size={40} />
-          </button>
-        </div>
+        {/* MOBILE ICON */}
+        <button
+          onClick={() => setModalOpen(true)}
+          className="md:hidden text-[#F875AA] mr-4"
+        >
+          <Menu size={40} />
+        </button>
       </div>
 
-      {/* Animated Modal */}
+      {/* MOBILE / SIDE MENU */}
       <AnimatePresence>
         {modalOpen && (
           <>

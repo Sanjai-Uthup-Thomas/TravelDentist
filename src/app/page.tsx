@@ -16,6 +16,7 @@ import Laser from "../../public/laser.png";
 import FMR from "../../public/FMR.webp";
 import Footer from "./components/Footer";
 import Card from "./components/Card";
+import ClinicSection from "./components/ClinicSection";
 
 export default function Home() {
   const sections = [
@@ -261,6 +262,7 @@ export default function Home() {
         </div>
 
       </div> */}
+      <ClinicSection />
       <Footer />
     </div>
   );
