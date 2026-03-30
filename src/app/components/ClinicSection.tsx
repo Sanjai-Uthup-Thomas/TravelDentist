@@ -43,9 +43,9 @@ export default function ClinicSection() {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="relative md:pt-24 pb-10">
+    <section className="relative md:pt-24 pb-10 bg-gradient-to-b from-pink-50 via-white to-pink-50">
       {/* BACKGROUND GLOW */}
-      <div className="absolute inset-0 bg-gradient-to-b from-pink-50 via-white to-pink-50" />
+      <div className="absolute inset-0 " />
       <div className="absolute top-20 left-10 w-72 h-72 bg-pink-200 opacity-30 blur-3xl rounded-full" />
       <div className="absolute bottom-80 right-10 w-72 h-72 bg-pink-300 opacity-20 blur-3xl rounded-full" />
 
@@ -166,14 +166,14 @@ export default function ClinicSection() {
       </div>
 
       {/* CTA */}
-      <div className="relative text-center my-8">
+      {/* <div className="relative text-center my-8">
         <a
           href="/contact-us"
           className="bg-gradient-to-r from-pink-500 to-pink-600 text-white px-10 py-4 rounded-full font-semibold shadow-xl hover:scale-105 transition"
         >
           Book Your Visit
         </a>
-      </div>
+      </div> */}
     </section>
   );
 }

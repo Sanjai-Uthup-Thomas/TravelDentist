@@ -1,13 +1,6 @@
 "use client";
-
-import Image from "next/image";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import { motion } from "framer-motion"; // 👈 import motion
-import QualityIcon from "../../public/Quality.svg";
-import ComfortIcon from "../../public/Comfort.svg";
-import TechnologyIcon from "../../public/Technology.svg";
-import Image1 from "../../public/Image.jpg";
 import GUM_DISEASE_TREATMENT from "../../public/GUM-DISEASE-TREATMENT.jpg";
 import dentalImplants from "../../public/dentalImplants.webp";
 import GummySmileCorrection from "../../public/gummy-smile-correction.webp";
@@ -17,6 +10,8 @@ import FMR from "../../public/FMR.webp";
 import Footer from "./components/Footer";
 import Card from "./components/Card";
 import ClinicSection from "./components/ClinicSection";
+import CinematicSection from "./components/CinematicSection";
+import DifferenceSection from "./components/DifferenceSection";
 
 export default function Home() {
   const sections = [
@@ -86,121 +81,45 @@ export default function Home() {
     <div className="relative min-h-screen">
       <Navbar />
       <Hero />
-
-      {/* Animated Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-        {/* Center Title */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="h-60 bg-white flex items-center justify-center"
-        >
-          <h1 className="text-[#f875aa] text-2xl font-bold text-center">
-            THE TRAVEL DENTIST DIFFERENCE
-          </h1>
-        </motion.div>
-
-        {/* Quality */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="h-60 bg-[#F875AA] rounded-t-3xl md:rounded-t-none md:rounded-l-3xl flex flex-col items-center justify-center"
-        >
-          <Image src={QualityIcon} alt="Quality Icon" width={48} height={48} />
-          <h1 className="text-white text-2xl font-bold text-center mt-2">
-            QUALITY
-          </h1>
-          <h3 className="text-white text-center">
-            Expert clinicians, guided by science
-          </h3>
-        </motion.div>
-
-        {/* Comfort */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="h-60 bg-[#F875AA] flex flex-col items-center justify-center"
-        >
-          <Image src={ComfortIcon} alt="Comfort Icon" width={48} height={48} />
-          <h1 className="text-white text-2xl font-bold text-center mt-2">
-            COMFORT
-          </h1>
-          <h3 className="text-white text-center">
-            Relaxing care in a calm environment
-          </h3>
-        </motion.div>
-
-        {/* Technology */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="h-60 bg-[#F875AA] flex flex-col items-center justify-center"
-        >
-          <Image
-            src={TechnologyIcon}
-            alt="Technology Icon"
-            width={48}
-            height={48}
-          />
-          <h1 className="text-white text-2xl font-bold text-center mt-2">
-            TECHNOLOGY
-          </h1>
-          <h3 className="text-white text-center">
-            The latest tools for a modern experience
-          </h3>
-        </motion.div>
-      </div>
-      <div className="min-h-[500px] bg-[#F875AA] mt-10 flex flex-col md:flex-row items-center justify-center gap-6 px-4 md:px-20 overflow-hidden">
-        {/* Left Box - Animated Image */}
-        <motion.div
-          className="w-full md:w-1/2 flex items-center justify-center"
-          initial={{ opacity: 0, x: -100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true }}
-        >
-          <div className="w-full max-w-[500px] py-10">
-            <Image
-              src={Image1}
-              alt="Comfort Icon"
-              width={500}
-              height={500}
-              className="rounded-4xl object-contain w-full h-auto"
-            />
-          </div>
-        </motion.div>
-
-        {/* Right Box - Animated Text */}
-        <motion.div
-          className="w-full md:w-1/3 flex flex-col items-center justify-center p-6 text-center"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-          viewport={{ once: true }}
-        >
-          <h1 className="text-white text-2xl md:text-3xl font-bold mb-4">
-            Travel Dentist: Your Gateway to Confident Smiles
-          </h1>
-          <p className="text-white text-base md:text-lg leading-relaxed">
-            Travel Dentist is a unique dental platform dedicated to restoring
-            smiles and boosting confidence. Our mission is to preserve natural
-            teeth whenever possible and provide top-tier solutions like dental
-            implants to replace missing teeth. We specialize in patient-focused,
-            full-mouth rehabilitation procedures, making us your one-stop
-            destination for all gum health and tooth replacement needs.
-          </p>
-        </motion.div>
-      </div>
-      <div className="h-[200px] flex items-center justify-center bg-white">
+      <DifferenceSection />
+      {/* about */}
+      <CinematicSection />
+      {/* <div className="h-[200px] flex items-center justify-center bg-white">
         <h1 className="text-4xl md:text-5xl font-bold text-[#F875AA] tracking-wide">
           SERVICES
         </h1>
+      </div> */}
+      <div className="relative py-20 flex items-center justify-center overflow-hidden">
+        {/* BACKGROUND GRADIENT */}
+        <div className="absolute inset-0 bg-gradient-to-b from-pink-50 via-white to-pink-50" />
+
+        {/* GLOW ELEMENTS */}
+        <div className="absolute top-10 left-1/4 w-60 h-60 bg-pink-200 opacity-30 blur-3xl rounded-full" />
+        <div className="absolute bottom-10 right-1/4 w-60 h-60 bg-pink-300 opacity-20 blur-3xl rounded-full" />
+
+        {/* CONTENT */}
+        <div className="relative text-center">
+          {/* SMALL LABEL */}
+          <p className="text-sm tracking-widest text-pink-400 uppercase mb-3">
+            What We Offer
+          </p>
+
+          {/* MAIN TITLE */}
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-600">
+            Our <span className="text-[#F875AA]">Services</span>
+          </h1>
+
+          {/* SUBTEXT */}
+          <p className="text-gray-500 mt-4 max-w-xl mx-auto text-sm md:text-base">
+            Advanced dental treatments designed for comfort, precision, and
+            long-lasting results.
+          </p>
+
+          {/* DIVIDER */}
+          <div className="w-16 h-[3px] bg-[#F875AA] mx-auto mt-6 rounded-full" />
+        </div>
       </div>
-      <>
+      <div className="bg-gradient-to-b from-pink-50 via-white to-pink-50">
         {sections.map((section, index) => (
           <Card
             key={index}
@@ -212,7 +131,7 @@ export default function Home() {
             alt={section.alt}
           />
         ))}
-      </>
+      </div>
       {/* <div>
         <div className="h-[200px] flex items-center justify-center bg-white">
           <h1 className="text-4xl md:text-5xl font-bold text-[#F875AA] tracking-wide">
