@@ -14,7 +14,7 @@ export default function DifferenceSection() {
         transition={{ duration: 0.6 }}
         className="h-60 bg-white flex items-center justify-center"
       >
-        <h1 className="text-pink-600 text-2xl font-bold text-center">
+        <h1 className="text-[#F875AA] text-2xl font-bold text-center">
           THE TRAVEL DENTIST DIFFERENCE
         </h1>
       </motion.div>
@@ -24,7 +24,7 @@ export default function DifferenceSection() {
         initial={{ opacity: 0, scale: 0.8 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, delay: 0.2 }}
-        className="h-60 bg-pink-500 rounded-t-3xl md:rounded-t-none md:rounded-l-3xl flex flex-col items-center justify-center"
+        className="h-60 bg-[#F875AA] rounded-t-3xl md:rounded-t-none md:rounded-l-3xl flex flex-col items-center justify-center"
       >
         <Image src={QualityIcon} alt="Quality Icon" width={48} height={48} />
         <h1 className="text-white text-2xl font-bold text-center mt-2">
@@ -40,7 +40,7 @@ export default function DifferenceSection() {
         initial={{ opacity: 0, scale: 0.8 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, delay: 0.4 }}
-        className="h-60 bg-pink-500 flex flex-col items-center justify-center"
+        className="h-60 bg-[#F875AA] flex flex-col items-center justify-center"
       >
         <Image src={ComfortIcon} alt="Comfort Icon" width={48} height={48} />
         <h1 className="text-white text-2xl font-bold text-center mt-2">
@@ -56,7 +56,7 @@ export default function DifferenceSection() {
         initial={{ opacity: 0, scale: 0.8 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, delay: 0.6 }}
-        className="h-60 bg-pink-500 flex flex-col items-center justify-center"
+        className="h-60 bg-[#F875AA] flex flex-col items-center justify-center"
       >
         <Image
           src={TechnologyIcon}
