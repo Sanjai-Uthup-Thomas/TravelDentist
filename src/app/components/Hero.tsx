@@ -33,7 +33,7 @@ export default function Hero() {
           initial={{ opacity: 0, x: -60 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-white space-y-6 max-w-xl mx-auto lg:mx-0 text-center lg:text-left"
+          className="text-white space-y-6 max-w-xl mx-auto md:mx-0 text-center lg:text-left"
         >
           {/* Tag */}
           <p className="text-pink-400 text-sm tracking-widest uppercase">
@@ -117,7 +117,7 @@ export default function Hero() {
         <div className="hidden lg:block"></div>
 
         {/* CTA BUTTONS */}
-        <div className="md:p-10 flex flex-col sm:flex-row gap-4 mt-6 w-full max-w-2xl mx-auto lg:mx-0 justify-center lg:justify-start">
+        <div className="lg:p-10 flex flex-col sm:flex-row gap-4 mt-6 w-full max-w-2xl mx-auto lg:mx-0 justify-center lg:justify-start">
           {/* PRIMARY CTA */}
           <Link
             href="/contact-us"
@@ -138,7 +138,7 @@ export default function Hero() {
           </Link>
         </div>
         {/* CTA BUTTONS */}
-        <div className="md:p-10 flex flex-col sm:flex-row gap-4 mt-6 w-full max-w-2xl mx-auto lg:mx-0 justify-center lg:justify-start ">
+        <div className="lg:p-10 flex flex-col sm:flex-row gap-4 mt-6 w-full max-w-2xl mx-auto lg:mx-0 justify-center lg:justify-start ">
           {/* CALL CTA */}
           <a
             href="tel:+919035153096"

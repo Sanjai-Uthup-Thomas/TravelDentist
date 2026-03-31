@@ -71,12 +71,12 @@ export default function Navbar() {
             scale: scrolled ? 0.8 : 1,
           }}
           transition={{ duration: 0.3 }}
-          className="absolute left-1/2 -translate-x-1/2 top-0 md:top-0"
+          className="absolute left-1/2 md:left-90 lg:left-1/2 -translate-x-1/2 top-0"
         >
           <Image
             src={T}
             alt="Center Logo"
-            width={110} // 👈 smaller for mobile
+            width={scrolled ? 100 : 120} // 👈 smaller for mobile
             className="md:w-[160px]"
           />
         </motion.div>
